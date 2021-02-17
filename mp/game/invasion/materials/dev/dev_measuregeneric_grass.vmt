@@ -1,7 +1,0 @@
-LightmappedGeneric {
-	$basetexture dev/dev_grid_white
-	$color "{73 158 88}"
-	$color2 "{73 158 88}"
-	$surfaceprop grass
-	%keywords "invasion dev"
-}

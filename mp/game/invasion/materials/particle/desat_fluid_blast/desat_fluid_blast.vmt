@@ -1,8 +1,0 @@
-SpriteCard
-{
-$BASETEXTURE "particle/desat_fluid_blast/desat_fluid_blast"
-$OVERBRIGHTFACTOR 1.5
-$ADDSELF 0.5
-$DEPTHBLEND 1
-$vertexcolor 1
-}

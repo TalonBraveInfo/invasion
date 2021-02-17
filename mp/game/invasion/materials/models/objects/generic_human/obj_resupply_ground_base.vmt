@@ -1,5 +1,0 @@
-"VertexLitGeneric" {
-	"$basetexture" "dev/placeholder_human"
-	"$surfaceprop" "Metal"
-	"$vertexcolor" 1
-}

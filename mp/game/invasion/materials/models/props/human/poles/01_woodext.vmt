@@ -1,5 +1,0 @@
-"VertexlitGeneric"
-{
-	"$basetexture" "models/props/human/poles/01_woodext"
-	"$surfaceprop" "Wood_Solid"
-}

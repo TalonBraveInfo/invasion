@@ -1,7 +1,0 @@
-"UnlitGeneric"
-{
-	"$basetexture" "sprites/strider_blackball"
-	"$additive" "1"
-	"$vertexcolor" 1
-	"$ignoreZ" "0"
-}

@@ -1,6 +1,0 @@
-"UnlitGeneric"
-{
-	"$basetexture" 	"vgui/vgui_hover"
-	"$additive" 	"1"
-	"$ignorez"     	"0"
-}

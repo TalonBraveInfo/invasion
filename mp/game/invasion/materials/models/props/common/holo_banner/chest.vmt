@@ -1,6 +1,0 @@
-"VertexlitGeneric"
-{
-	"$basetexture" "models/props/common/holo_banner/holo1"
-	"$surfaceprop" "Metal"
-	$selfillum 0
-}

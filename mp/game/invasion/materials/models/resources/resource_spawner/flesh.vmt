@@ -1,5 +1,0 @@
-"VertexlitGeneric"
-{
-	"$basetexture" "models/resources/resource_spawner/flesh"
-	"$surfaceprop" "AlienFlesh"
-}

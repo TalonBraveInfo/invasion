@@ -1,5 +1,0 @@
-"VertexLitGeneric"
-{
-	"$basetexture" "models/props/common/meteorites/meteorplaceholdertexture"
-	"$surfaceprop" "rock"
-}

@@ -1,6 +1,0 @@
-"UnlitGeneric"
-{
-	"$basetexture" "vgui/team_human"
-	"$nolod" 1
-	"$translucent" 1
-}

@@ -1,9 +1,0 @@
-"VertexLitGeneric"
-{
-	"$baseTexture" "dev/graygrid"
-
-	"$detail" "detail\rock_detail_01"
-	"$detailscale" "10.2"
-	"$detailblendfactor" .9
-	"$detailblendmode" 0
-}

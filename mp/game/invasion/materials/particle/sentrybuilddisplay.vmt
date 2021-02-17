@@ -1,8 +1,0 @@
-SpriteCard
-{
-$basetexture "particle\sentrybuilddisplay"
-$vertexcolor 1
-$vertexalpha 1
-
-$additive 1
-}

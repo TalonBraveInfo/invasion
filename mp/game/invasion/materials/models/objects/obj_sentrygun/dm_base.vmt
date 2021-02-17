@@ -1,5 +1,0 @@
-"VertexlitGeneric"
-{
-	"$basetexture" "models/objects/obj_sentrygun/dm_base"
-	"$surfaceprop" "Metal"
-}

@@ -1,8 +1,0 @@
-SpriteCard
-{
-$basetexture "particle/blood_goop_beam_trail_1"
-$translucent 1
-$vertexcolor 1
-$vertexalpha 1
-$splinetype 1
-}

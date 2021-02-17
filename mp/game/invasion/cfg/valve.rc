@@ -1,9 +1,0 @@
-
-exec joystick.cfg
-exec autoexec.cfg
-
-stuffcmds
-
-startupmenu
-
-sv_unlockedchapters 99

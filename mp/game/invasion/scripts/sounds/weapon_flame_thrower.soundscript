@@ -1,7 +1,0 @@
-FlameThrower.Sound {
-	channel		CHAN_WEAPON
-	volume		1.0
-	soundlevel	SNDLVL_90db
-	pitch		95,105
-	wave		ambient/fire/gascan_ignite1.wav
-}

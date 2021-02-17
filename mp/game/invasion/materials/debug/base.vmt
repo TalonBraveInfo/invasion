@@ -1,9 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "debug/base"
-	"$bumpmap" "debug/base_normal"
-	"$envmapmask" "debug/base_specular"
-	"$envmap" "env_cubemap"
-	"$surfaceprop" "Default"
-	"%keywords" "invasion debug"
-}

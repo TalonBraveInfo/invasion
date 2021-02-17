@@ -1,6 +1,0 @@
-"UnlitGeneric"
-{
-	"$basetexture" "hud/menu/human_weapon_selection_background"
-	"$nocull" 1
-	"$translucent" 1
-}

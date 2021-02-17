@@ -1,8 +1,0 @@
-LimpetMine.Beep
-{
-	channel		CHAN_ITEM
-	pitch		PITCH_NORM
-	volume		VOL_NORM
-	soundlevel	SNDLVL_80dB
-	wave		"weapons/limpetmine/beep.wav"
-}

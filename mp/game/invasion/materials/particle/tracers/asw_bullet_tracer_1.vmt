@@ -1,9 +1,0 @@
-UnlitGeneric
-{
-$basetexture "particle/tracers/asw_bullet_tracer_1.vtf"
-$vertexcolor 1
-$vertexalpha 1
-$translucent 1
-$additive 1
-$nofog 1
-}

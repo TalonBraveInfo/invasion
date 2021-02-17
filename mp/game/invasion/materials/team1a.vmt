@@ -1,7 +1,0 @@
-"LightmappedGeneric"
-{
-	"$basetexture" "team1a"
-	"$envmap" env_cubemap
-	"$envmapmask" "team1ar"
-	"$surfaceprop" "metal"
-}
