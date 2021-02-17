@@ -1614,7 +1614,10 @@ void CBreakableProp::Break( CBaseEntity *pBreaker, const CTakeDamageInfo &info )
 		else if ( pBreaker && dynamic_cast< CBaseTFVehicle * >( pBreaker ) )
 		{
 			CBaseTFVehicle *veh = static_cast< CBaseTFVehicle * >( pBreaker );
-			bSmashed = veh->GetDriverPlayer();
+			CBaseTFPlayer *driver = veh->GetDriverPlayer();
+			if( driver != nullptr ) {
+				bSmashed = true;
+			}
 		}
 		if ( bSmashed )
 		{

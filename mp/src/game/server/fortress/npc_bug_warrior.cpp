@@ -323,15 +323,16 @@ void CNPC_Bug_Warrior::StartTask( const Task_t *pTask )
 
 			// We're fleeing from an enemy.
 			// If I have a squadmate, run to him.
-			CAI_BaseNPC *pSquadMate;
-			if ( m_pSquad && (pSquadMate = m_pSquad->NearestSquadMember(this)) )
+			if ( m_pSquad != nullptr )
 			{
-				SetTarget( pSquadMate );
-				AI_NavGoal_t goal( GOALTYPE_TARGETENT, vec3_origin, ACT_RUN );
-				if ( GetNavigator()->SetGoal( goal ) )
-				{
-					TaskComplete();
-					return;
+				CAI_BaseNPC *pSquadMate = m_pSquad->NearestSquadMember( this );
+				if( pSquadMate != nullptr ) {
+					SetTarget( pSquadMate );
+					AI_NavGoal_t goal( GOALTYPE_TARGETENT, vec3_origin, ACT_RUN );
+					if( GetNavigator()->SetGoal( goal ) ) {
+						TaskComplete();
+						return;
+					}
 				}
 			}
 
