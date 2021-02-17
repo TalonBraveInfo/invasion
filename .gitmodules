@@ -1,0 +1,3 @@
+[submodule "mp/game/invasion"]
+	path = mp/game/invasion
+	url = https://github.com/TalonBraveInfo/invasion-release.git
