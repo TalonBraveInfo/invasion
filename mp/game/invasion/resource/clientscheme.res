@@ -1553,8 +1553,8 @@ Client
 	{
 		"1"	"resource/HALFLIFE2.ttf"
 		"2"	"resource/HL2crosshairs.ttf"
-		"3"	"resource/fonts/Squada_One/SquadaOne-Regular.ttf"
-		"4" "resource/fonts/Michroma/Michroma.ttf"
+		"3"	"resource/fonts/SquadaOne-Regular.ttf"
+		"4" "resource/fonts/Michroma.ttf"
 		"5" "resource/fonts/CRYSRG__.TTF"
 	}
 }

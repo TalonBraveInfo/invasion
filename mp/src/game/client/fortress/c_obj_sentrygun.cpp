@@ -8,7 +8,7 @@
 #include "bone_setup.h"
 #include "CommanderOverlay.h"
 #include "c_baseobject.h"
-#include "C_Obj_SentryGun.h"
+#include "c_obj_sentrygun.h"
 #include "tf_shareddefs.h"
 #include "c_basetfplayer.h"
 #include "ObjectControlPanel.h"

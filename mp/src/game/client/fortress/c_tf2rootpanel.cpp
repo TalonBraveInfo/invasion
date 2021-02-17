@@ -1,7 +1,7 @@
 #include "cbase.h"
 #include "c_tf2rootpanel.h"
 #include <vgui_controls/Controls.h>
-#include <vgui/IVgui.h>
+#include <vgui/IVGui.h>
 #include "paneleffect.h"
 #include "itfhintitem.h"
 #include "clientmode_commander.h"

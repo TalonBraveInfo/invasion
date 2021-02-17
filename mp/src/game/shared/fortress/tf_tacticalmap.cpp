@@ -11,7 +11,7 @@
 #include "c_team.h"
 #include "c_tfteam.h"
 #include "c_basetfplayer.h"
-#include "C_BaseObject.h"
+#include "c_baseobject.h"
 
 static inline bool IsPlayerCamoed( int iEntIndex )
 {

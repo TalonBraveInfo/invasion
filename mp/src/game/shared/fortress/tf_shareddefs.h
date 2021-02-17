@@ -9,6 +9,7 @@
 
 #define PLAYER_MSG_PERSONAL_SHIELD	2
 
+class ConVar;
 extern ConVar	inv_demo;
 extern ConVar	lod_effect_distance;
 

@@ -472,7 +472,8 @@ void CBaseTFFourWheelVehicle::PlayerControlInit( CBasePlayer *pPlayer )
 	pPlayer->SetViewOffset( vec3_origin );
 
 	m_playerOn.FireOutput( pPlayer, this, 0 );
-	InputTurnOn( inputdata_t() );
+	inputdata_t inputdata;
+	InputTurnOn( inputdata );
 
 	// Release the handbrake.
 	if ( !IsDeployed() )
@@ -495,7 +496,8 @@ void CBaseTFFourWheelVehicle::PlayerControlShutdown()
 	m_attackaxis.Set( 0, pPlayer, this );
 	m_attack2axis.Set( 0, pPlayer, this );
 
-	InputTurnOff( inputdata_t() );
+	inputdata_t inputdata;
+	InputTurnOff( inputdata );
 	m_VehiclePhysics.SetHandbrake( true ); //to stop the vehicle from sliding away with no driver
 	m_VehiclePhysics.SetThrottle( 0.0f );
 }

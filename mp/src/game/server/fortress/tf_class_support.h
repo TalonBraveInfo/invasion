@@ -11,7 +11,7 @@
 #endif
 
 #include "tf_basecombatweapon.h"
-#include "TFClassData_Shared.h"
+#include "tfclassdata_shared.h"
 
 //=====================================================================
 // Support 

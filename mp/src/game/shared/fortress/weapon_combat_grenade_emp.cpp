@@ -5,7 +5,7 @@
 // $NoKeywords: $
 //=============================================================================//
 #include "cbase.h"
-#include "sprite.h"
+#include "Sprite.h"
 #include "basetfplayer_shared.h"
 #include "weapon_combat_usedwithshieldbase.h"
 #include "weapon_combat_basegrenade.h"

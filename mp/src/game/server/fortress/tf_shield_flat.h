@@ -9,7 +9,7 @@
 #define TF_SHIELD_FLAT_H
 
 #include "tf_shield.h"
-#include "mathlib/Vector.h"
+#include "mathlib/vector.h"
 
 //-----------------------------------------------------------------------------
 //

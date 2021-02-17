@@ -7,7 +7,7 @@
 #include "cbase.h"
 #include "c_walker_strider.h"
 #include "beamdraw.h"
-#include "ClientEffectPrecacheSystem.h"
+#include "clienteffectprecachesystem.h"
 
 extern ConVar vehicle_free_pitch, vehicle_free_roll;
 

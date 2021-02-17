@@ -1,5 +1,5 @@
 #include "cbase.h"
-#include "PanelEffect.h"
+#include "paneleffect.h"
 #include "vgui_int.h"
 #include <vgui_controls/Panel.h>
 #include <vgui/IPanel.h>

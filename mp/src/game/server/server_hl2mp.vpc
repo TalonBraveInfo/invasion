@@ -70,8 +70,6 @@ $Project "Server"
 		{
 			$Folder	"Shared"
 			{
-				$File	$SRCDIR\game\shared\fortress\grenade_base_empable.cpp
-				$File	$SRCDIR\game\shared\fortress\grenade_base_empable.h
 				$File	$SRCDIR\game\shared\fortress\baseobject_shared.cpp
 				$File	$SRCDIR\game\shared\fortress\baseobject_shared.h
 				$File	$SRCDIR\game\shared\fortress\basetfcombatweapon_shared.cpp
@@ -85,6 +83,7 @@ $Project "Server"
 				// Grenades
 				$File	$SRCDIR\game\shared\fortress\grenade_antipersonnel.cpp
 				$File	$SRCDIR\game\shared\fortress\grenade_base_empable.cpp
+				$File	$SRCDIR\game\shared\fortress\grenade_base_empable.h
 				$File	$SRCDIR\game\shared\fortress\grenade_emp.cpp
 				$File	$SRCDIR\game\shared\fortress\grenade_objectsapper.cpp
 				$File	$SRCDIR\game\shared\fortress\grenade_objectsapper.h
@@ -220,6 +219,7 @@ $Project "Server"
 				$File	fortress/tf_obj_manned_shield.cpp
 				$File	fortress/tf_obj_mapdefined.cpp
 				$File	fortress/tf_obj_mcv_selection_panel.cpp
+				$File	fortress/tf_obj_mcv_selection_panel.h
 				$File	fortress/tf_obj_mortar.cpp
 				$File	fortress/tf_obj_powerpack.cpp
 				$File	fortress/tf_obj_powerpack.h
@@ -422,9 +422,6 @@ $Project "Server"
 				$File	fortress/tf_walker_strider.cpp
 				$File	fortress/tf_walker_strider.h
 			}
-
-			$File	fortress/tf_obj_mcv_selection_panel.cpp
-			$File	fortress/tf_obj_mcv_selection_panel.h
 		}
 	}
 }

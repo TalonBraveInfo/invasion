@@ -9,7 +9,7 @@
 #define TF_CLASS_RECON_H
 #pragma once
 
-#include "TFClassData_Shared.h"
+#include "tfclassdata_shared.h"
 #include "tf_playerclass.h"
 
 class CTFJetpackSteam;

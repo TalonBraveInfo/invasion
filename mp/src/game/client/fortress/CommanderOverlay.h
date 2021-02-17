@@ -18,7 +18,7 @@
 #pragma once
 #endif
 
-#include "PanelMetaClassMgr.h"
+#include "panelmetaclassmgr.h"
 
 
 //-----------------------------------------------------------------------------

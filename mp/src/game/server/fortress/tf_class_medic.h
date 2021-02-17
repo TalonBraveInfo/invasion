@@ -13,7 +13,7 @@
 #endif
 
 
-#include "TFClassData_Shared.h"
+#include "tfclassdata_shared.h"
 
 //=====================================================================
 // Medic

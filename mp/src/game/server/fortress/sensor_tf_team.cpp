@@ -6,8 +6,8 @@
 //=============================================================================
 
 #include "cbase.h"
-#include "EntityInput.h"
-#include "EntityOutput.h"
+#include "entityinput.h"
+#include "entityoutput.h"
 #include "tf_team.h"
 #include "tf_obj.h"
 

@@ -19,16 +19,16 @@
 #include "view.h"
 #include "view_shared.h"
 #include "CommanderOverlay.h"
-#include "C_TfTeam.h"
-#include <vgui/mousecode.h>
+#include "c_tfteam.h"
+#include <vgui/MouseCode.h>
 #include <vgui/KeyCode.h>
 #include <vgui/IPanel.h>
 #include "commanderoverlaypanel.h"
-#include "PixelWriter.h"
-#include "materialsystem/IMaterialVar.h"
-#include "materialsystem/ITexture.h"
+#include "pixelwriter.h"
+#include "materialsystem/imaterialvar.h"
+#include "materialsystem/itexture.h"
 #include "vtf/vtf.h"
-#include "engine/IVDebugOverlay.h"
+#include "engine/ivdebugoverlay.h"
 
 
 static inline int AlphaMapIndex(int x, int y)

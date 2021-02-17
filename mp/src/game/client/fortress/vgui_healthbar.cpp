@@ -1,5 +1,5 @@
 #include "cbase.h"
-#include "vgui_HealthBar.h"
+#include "vgui_healthbar.h"
 #include "CommanderOverlay.h"
 #include <vgui_controls/Controls.h>
 #include <vgui/ISurface.h>

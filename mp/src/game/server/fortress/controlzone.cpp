@@ -7,7 +7,7 @@
 
 #include "tf_shareddefs.h"
 #include "cbase.h"
-#include "EntityOutput.h"
+#include "entityoutput.h"
 #include "tf_player.h"
 #include "controlzone.h"
 #include "team.h"

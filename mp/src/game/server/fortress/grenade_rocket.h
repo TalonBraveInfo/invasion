@@ -48,7 +48,7 @@ public:
 		return DMG_BLAST;
 	}
 
-	static CGrenadeRocket *CGrenadeRocket::Create( const Vector &vecOrigin, const Vector &vecAngles, edict_t *pentOwner, CBaseEntity *pRealOwner );
+	static CGrenadeRocket *Create( const Vector &vecOrigin, const Vector &vecAngles, edict_t *pentOwner, CBaseEntity *pRealOwner );
 
 public:
 	EHANDLE		m_hLockTarget;

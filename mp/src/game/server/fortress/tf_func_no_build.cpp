@@ -10,7 +10,7 @@
 #include "cbase.h"
 #include "tf_func_no_build.h"
 #include "tf_team.h"
-#include "NDebugOverlay.h"
+#include "ndebugoverlay.h"
 #include "tf_obj.h"
 
 //-----------------------------------------------------------------------------

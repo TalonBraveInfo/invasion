@@ -8,7 +8,7 @@ Copyright (C) 2014-2019 TalonBrave.info
 #include "gamerules.h"
 #include "teamplay_gamerules.h"
 #include "tf_gamerules.h"
-#include "EntityList.h"
+#include "entitylist.h"
 #include "physics.h"
 #include "game.h"
 #include "ai_network.h"

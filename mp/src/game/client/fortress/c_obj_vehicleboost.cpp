@@ -6,7 +6,7 @@
 
 #include "cbase.h"
 #include "hud.h"
-#include "commanderoverlay.h"
+#include "CommanderOverlay.h"
 #include "tf_obj_baseupgrade_shared.h"
 
 //-----------------------------------------------------------------------------

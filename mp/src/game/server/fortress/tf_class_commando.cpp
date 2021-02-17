@@ -2,7 +2,7 @@
 #include "tf_player.h"
 #include "tf_class_commando.h"
 #include "tf_vehicle_teleport_station.h"
-#include "EntityList.h"
+#include "entitylist.h"
 #include "basecombatweapon.h"
 #include "weapon_builder.h"
 #include "tf_obj.h"

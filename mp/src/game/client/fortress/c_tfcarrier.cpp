@@ -7,7 +7,7 @@
 #include "c_base.h
 #include "bone_setup.h"
 #include "CommanderOverlay.h"
-#include "c_AI_BaseNPC.h"
+#include "c_ai_basenpc.h"
 #include "c_tfcarrier.h"
 
 IMPLEMENT_CLIENTCLASS_DT(C_TFCarrier, DT_TFCarrier, CTFCarrier)

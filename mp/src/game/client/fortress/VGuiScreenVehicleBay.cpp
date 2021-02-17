@@ -5,12 +5,12 @@
 // $NoKeywords: $
 //=============================================================================//
 #include "cbase.h"
-#include "C_VGuiScreen.h"
+#include "c_vguiscreen.h"
 #include "clientmode_tfbase.h"
-#include <vgui/IVGUI.h>
+#include <vgui/IVGui.h>
 #include <vgui_controls/Controls.h>
 #include <vgui_controls/Label.h>
-#include "VGUI_BitmapButton.h"
+#include "vgui_bitmapbutton.h"
 #include "c_info_act.h"
 #include "tf_shareddefs.h"
 #include "c_basetfplayer.h"

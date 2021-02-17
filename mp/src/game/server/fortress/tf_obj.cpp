@@ -27,7 +27,7 @@ Copyright (C) 2014-2016 TalonBrave.info
 #include "tf_obj_sentrygun.h"
 #include "tf_obj_powerpack.h"
 #include "tf_shareddefs.h"
-#include "VGuiScreen.h"
+#include "vguiscreen.h"
 #include "resource_chunk.h"
 #include "hierarchy.h"
 #include "tf_func_construction_yard.h"
@@ -957,7 +957,7 @@ bool CBaseObject::VerifyCorner( const Vector &vBottomCenter, float xOffset, floa
 //-----------------------------------------------------------------------------
 // Purpose: Check under a build point to ensure it's buildable on
 //-----------------------------------------------------------------------------
-bool CBaseObject::CheckBuildPoint( Vector vecPoint, Vector &vecTrace, Vector *vecOutPoint )
+bool CBaseObject::CheckBuildPoint( const Vector &vecPoint, const Vector &vecTrace, Vector *vecOutPoint )
 {
 	trace_t tr;
 
@@ -965,7 +965,7 @@ bool CBaseObject::CheckBuildPoint( Vector vecPoint, Vector &vecTrace, Vector *ve
 	Vector vecEnd;
 
 	// Ensure that this point isn't in a no-build zone:
-	if( !tf_fastbuild.GetInt() && NoBuildPreventsBuild(this, vecPoint ) )
+	if( !tf_fastbuild.GetInt() && NoBuildPreventsBuild( this, vecPoint ) )
 		bClear = false;
 
 	// If the point isn't in solid, trace down until we find the ground

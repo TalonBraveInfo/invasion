@@ -13,7 +13,7 @@
 
 #include <vgui_controls/Panel.h>
 #include <vgui_controls/Label.h>
-#include <vgui/cursor.h>
+#include <vgui/Cursor.h>
 
 class IMaterial;
 

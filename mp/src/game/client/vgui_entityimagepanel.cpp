@@ -8,7 +8,7 @@
 #include "cbase.h"
 #include "vgui_entityimagepanel.h"
 #include <KeyValues.h>
-#include "c_BaseTFPlayer.h"
+#include "c_basetfplayer.h"
 #include <vgui/IVGui.h>
 #include "vgui_bitmapimage.h"
 

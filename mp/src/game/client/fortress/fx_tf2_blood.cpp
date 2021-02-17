@@ -2,15 +2,15 @@
 // Purpose: A blood spray effect to expose successful hits.
 
 #include "cbase.h"
-#include "ClientEffectPrecacheSystem.h"
-#include "FX_Sparks.h"
+#include "clienteffectprecachesystem.h"
+#include "fx_sparks.h"
 #include "iefx.h"
 #include "c_te_effect_dispatch.h"
 #include "particles_ez.h"
 #include "decals.h"
 #include "engine/IEngineSound.h"
 #include "fx_quad.h"
-#include "engine/IVDebugOverlay.h"
+#include "engine/ivdebugoverlay.h"
 #include "shareddefs.h"
 #include "fx_blood.h"
 #include "tf_shareddefs.h"

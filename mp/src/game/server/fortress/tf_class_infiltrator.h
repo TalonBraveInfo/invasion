@@ -20,7 +20,7 @@
 // Time after spawning that the infilitrator's camo kicks in
 #define INFILTRATOR_CAMOTIME_AFTER_SPAWN	3.0
 
-#include "TFClassData_Shared.h"
+#include "tfclassdata_shared.h"
 
 class CLootableCorpse;
 

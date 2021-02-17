@@ -15,7 +15,7 @@
 #include "particles_simple.h"
 #include "fx.h"
 #include "fx_quad.h"
-#include "ClientEffectPrecacheSystem.h"
+#include "clienteffectprecachesystem.h"
 
 #define CWeaponArcWelder C_WeaponArcWelder
 #else

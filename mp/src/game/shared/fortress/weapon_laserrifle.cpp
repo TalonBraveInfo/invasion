@@ -8,7 +8,7 @@
 //=============================================================================//
 
 #include "cbase.h"
-#include "NPCEvent.h"
+#include "npcevent.h"
 #include "tf_basecombatweapon.h"
 #include "basecombatcharacter.h"
 #include "smoke_trail.h"

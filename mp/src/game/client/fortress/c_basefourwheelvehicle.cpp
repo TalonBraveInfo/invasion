@@ -5,7 +5,7 @@
 // $NoKeywords: $
 //=============================================================================
 #include "cbase.h"
-#include "C_BaseFourWheelVehicle.h"
+#include "c_basefourwheelvehicle.h"
 
 IMPLEMENT_CLIENTCLASS_DT(C_BaseTFFourWheelVehicle, DT_BaseTFFourWheelVehicle, CBaseTFFourWheelVehicle)
 	RecvPropFloat( RECVINFO( m_flDeployFinishTime ) ),

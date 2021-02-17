@@ -5,7 +5,7 @@
 // $NoKeywords: $
 //=============================================================================
 #include "cbase.h"
-#include "C_Env_Meteor.h"
+#include "c_env_meteor.h"
 #include "fx_explosion.h"
 #include "tempentity.h"
 #include "c_tracer.h"

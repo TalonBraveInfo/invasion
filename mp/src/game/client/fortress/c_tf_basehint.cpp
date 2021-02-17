@@ -9,7 +9,7 @@
 #include "tf_hints.h"
 #include "itfhintitem.h"
 #include <vgui_controls/Controls.h>
-#include <vgui/IVgui.h>
+#include <vgui/IVGui.h>
 #include <vgui/Cursor.h>
 #include <vgui_controls/Label.h>
 #include <vgui/ISurface.h>

@@ -14,7 +14,7 @@
 
 #include "hud_minimap.h"
 #include "TeamBitmapImage.h"
-#include "VGUI_BitmapImage.h"
+#include "vgui_bitmapimage.h"
 #include <vgui_controls/Panel.h>
 
 

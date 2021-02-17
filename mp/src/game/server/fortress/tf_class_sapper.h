@@ -11,7 +11,7 @@
 #pragma once
 #endif
 
-#include "TFClassData_Shared.h"
+#include "tfclassdata_shared.h"
 #include "damagemodifier.h"
 
 class CEMPPulseStatus;

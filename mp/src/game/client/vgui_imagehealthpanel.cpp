@@ -7,7 +7,7 @@
 //=============================================================================//
 #include "cbase.h"
 #include "vgui_imagehealthpanel.h"
-#include "commanderoverlay.h"
+#include "CommanderOverlay.h"
 #include <KeyValues.h>
 #include "mapdata.h"
 

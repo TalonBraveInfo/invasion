@@ -6,7 +6,7 @@
 #endif
 
 
-#include "Teamplay_GameRules.h"
+#include "teamplay_gamerules.h"
 #include "takedamageinfo.h"
 
 

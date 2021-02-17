@@ -740,7 +740,7 @@ void CHudWeaponSelection::GetSlotInfo(const CWeaponMenuItem *w, C_BaseCombatWeap
 		info.icon = gHUD.GetIcon(GetBuildMenuMaterial(w->openbuildmenu));
 		info.drawAmmo = false;
 		info.ammoCaution = false;
-		Q_snprintf(info.printname, sizeof(info.printname), GetBuildMenuName(w->openbuildmenu));
+		Q_snprintf(info.printname, sizeof(info.printname), "%s", GetBuildMenuName(w->openbuildmenu));
 		info.weapon = NULL;
 	}
 	else if (!w->weapon)
@@ -750,13 +750,12 @@ void CHudWeaponSelection::GetSlotInfo(const CWeaponMenuItem *w, C_BaseCombatWeap
 		info.icon = NULL;
 		info.drawAmmo = false;
 		info.ammoCaution = false;
-		Q_snprintf(info.printname, sizeof(info.printname), "");
+		Q_snprintf(info.printname, sizeof(info.printname), "%s", GetBuildMenuName(w->openbuildmenu));
 		info.weapon = NULL;
 	}
 	else
 	{
 		C_BaseCombatWeapon *pWeapon = w->weapon;
-		Assert(pWeapon);
 
 		info.active = active == pWeapon;
 		info.valid = pWeapon->CanBeSelected();

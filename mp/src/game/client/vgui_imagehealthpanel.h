@@ -9,7 +9,7 @@
 #ifndef VGUI_IMAGEHEALTHPANEL_H
 #define VGUI_IMAGEHEALTHPANEL_H
 
-#include "vgui_EntityPanel.h"
+#include "vgui_entitypanel.h"
 #include "vgui_EntityImagePanel.h"
 #include "vgui_HealthBar.h"
 #include "vgui_bitmappanel.h"

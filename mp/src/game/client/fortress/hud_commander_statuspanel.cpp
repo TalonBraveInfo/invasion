@@ -3,7 +3,7 @@
 #include "hud_commander_statuspanel.h"
 #include "techtree.h"
 #include <vgui/IVGui.h>
-#include "vguimatsurface/imatsystemsurface.h"
+#include "VGuiMatSurface/IMatSystemSurface.h"
 #include <vgui_controls/Controls.h>
 #include <vgui/ISurface.h>
 #include <vgui/IScheme.h>
@@ -109,11 +109,11 @@ void CCommanderStatusPanel::Paint()
 
 	if ( m_Type == TYPE_INFO && m_nTitlePos != -1 )
 	{
-		m_szText[ m_nTitlePos ] = 0;
+		m_szText[ (int)m_nTitlePos ] = 0;
 
 		g_pMatSystemSurface->DrawColoredTextRect( m_hFont, x, y, wide, tall, 220, 220, 255, alpha, m_szText );
 
-		m_szText[ m_nTitlePos ] = '\n';
+		m_szText[ (int)m_nTitlePos ] = '\n';
 
 		y += vgui::surface()->GetFontTall( m_hFont );
 		tall -= vgui::surface()->GetFontTall( m_hFont );

@@ -19,7 +19,7 @@
 #include "playeroverlay.h"
 #include "playeroverlayselected.h"
 #include <KeyValues.h>
-#include "commanderoverlay.h"
+#include "CommanderOverlay.h"
 #include "hud_commander_statuspanel.h"
 //-----------------------------------------------------------------------------
 // Purpose: 

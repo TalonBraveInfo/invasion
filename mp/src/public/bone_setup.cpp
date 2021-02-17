@@ -5148,7 +5148,12 @@ float Studio_GetPoseParameter( const CStudioHdr *pStudioHdr, int iParameter, flo
 }
 
 
+#ifdef _MSC_VER
 #pragma warning (disable : 4701)
+#elif defined __GNUC__
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
+#endif
 
 
 //-----------------------------------------------------------------------------
@@ -5257,7 +5262,11 @@ static int ClipRayToHitbox( const Ray_t &ray, mstudiobbox_t *pbox, matrix3x4_t& 
 	return hitside;
 }
 
+#ifdef _MSC_VER
 #pragma warning (default : 4701)
+#elif defined __GNUC__
+#pragma GCC diagnostic pop
+#endif
 
 
 //-----------------------------------------------------------------------------

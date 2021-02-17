@@ -318,7 +318,12 @@ void CShield::SetEMPed( bool isEmped )
 //-----------------------------------------------------------------------------
 // Helper method for collision testing
 //-----------------------------------------------------------------------------
+#ifdef _MSC_VER
 #pragma warning ( disable : 4701 )
+#elif defined __GNUC__
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
+#endif
 
 bool CShield::TestCollision( const Ray_t& ray, unsigned int mask, trace_t& trace )
 {
@@ -427,6 +432,10 @@ bool CShield::TestCollision( const Ray_t& ray, unsigned int mask, trace_t& trace
 	return true;
 }
 
+#ifdef _MSC_VER
 #pragma warning ( default : 4701 )
+#elif defined __GNUC__
+#pragma GCC diagnostic pop
+#endif
 
 

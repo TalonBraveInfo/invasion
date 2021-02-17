@@ -5,22 +5,22 @@
 //=============================================================================
 
 #include "cbase.h"
-#include "ClientEffectPrecacheSystem.h"
-#include "FX_Sparks.h"
+#include "clienteffectprecachesystem.h"
+#include "fx_sparks.h"
 #include "iefx.h"
 #include "c_te_effect_dispatch.h"
 #include "particles_ez.h"
 #include "decals.h"
 #include "engine/IEngineSound.h"
 #include "fx_quad.h"
-#include "engine/IVDebugOverlay.h"
+#include "engine/ivdebugoverlay.h"
 #include "shareddefs.h"
 #include "tf_shareddefs.h"
 #include "c_impact_effects.h"
 #include "fx.h"
 #include "iviewrender_beams.h"
 #include "view.h"
-#include "ieffects.h"
+#include "IEffects.h"
 #include "c_tracer.h"
 
 CLIENTEFFECT_REGISTER_BEGIN( PrecacheEffectBuild )

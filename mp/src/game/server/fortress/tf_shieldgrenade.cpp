@@ -6,13 +6,13 @@
 //=============================================================================//
 
 #include "cbase.h"
-#include "BaseAnimating.h"
+#include "baseanimating.h"
 #include "tf_shieldgrenade.h"
 #include "tf_shieldshared.h"
 #include "tf_shield_flat.h"
 #include "tf_player.h"
 #include "engine/IEngineSound.h"
-#include "sprite.h"
+#include "Sprite.h"
 
 #define SHIELD_GRENADE_FUSE_TIME 2.25f
 

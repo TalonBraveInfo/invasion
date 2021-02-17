@@ -42,16 +42,13 @@ $Project "Client"
 		
 		$File	"vgui_entityimagepanel.cpp"
 		$File	"vgui_entitypanel.cpp"
-		$File	"teambitmapimage.cpp"
+		$File	"TeamBitmapImage.cpp"
 		$File	"hl2mp\hl2mp_hud_chat.cpp"
 
 		$Folder	"Invasion"
 		{
 			$Folder	"Shared"
 			{			
-				$File	$SRCDIR\game\shared\fortress\weapon_repairgun.cpp
-				$File	$SRCDIR\game\shared\fortress\weapon_repairgun.h
-
 				$File	$SRCDIR\game\shared\fortress\baseobject_shared.cpp
 				$File	$SRCDIR\game\shared\fortress\baseobject_shared.h
 				$File	$SRCDIR\game\shared\fortress\basetfcombatweapon_shared.cpp
@@ -63,8 +60,8 @@ $Project "Client"
 				$File	$SRCDIR\game\shared\fortress\env_meteor_shared.cpp
 
 				// Grenades
-				$File	$SRCDIR\game\shared\fortress\grenade_base_empable.cpp
-				$File	$SRCDIR\game\shared\fortress\grenade_base_empable.h
+				//$File	$SRCDIR\game\shared\fortress\grenade_base_empable.cpp
+				//$File	$SRCDIR\game\shared\fortress\grenade_base_empable.h
 				//$File	$SRCDIR\game\shared\fortress\grenade_objectsapper.cpp
 				//$File	$SRCDIR\game\shared\fortress\grenade_objectsapper.h
 				//$File	$SRCDIR\game\shared\fortress\grenade_limpetmine.cpp
@@ -166,6 +163,7 @@ $Project "Client"
 						$File	$SRCDIR\game\shared\fortress\weapon_combat_grenade_emp.cpp
 
 						$File	$SRCDIR\game\shared\fortress\grenade_base_empable.cpp
+						$File	$SRCDIR\game\shared\fortress\grenade_base_empable.h
 						$File	$SRCDIR\game\shared\fortress\grenade_emp.cpp
 					}
 
@@ -320,8 +318,6 @@ $Project "Client"
 			$File	fortress/c_basetfplayer.h
 			$File	fortress/c_controlzone.cpp
 			$File	fortress/c_controlzone.h
-			$File	fortress/c_vehicle_tank.cpp
-			$File	fortress/c_vehicle_tank.h
 			$File	fortress/c_demo_entities.cpp
 			$File	fortress/c_demo_entities.h
 			$File	fortress/c_effect_shootingstar.cpp

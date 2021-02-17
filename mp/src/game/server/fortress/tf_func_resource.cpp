@@ -2,8 +2,8 @@
 // Purpose: Resource collection area
 
 #include "cbase.h"
-#include "EntityOutput.h"
-#include "EntityList.h"
+#include "entityoutput.h"
+#include "entitylist.h"
 #include "tf_player.h"
 #include "tf_func_resource.h"
 #include "tf_team.h"

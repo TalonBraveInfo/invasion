@@ -10,7 +10,7 @@
 #include "mapdata.h"
 #include "c_playerresource.h"
 #include "c_team.h"
-#include "commanderoverlay.h"
+#include "CommanderOverlay.h"
 #include <KeyValues.h>
 #include <vgui/IVGui.h>
 

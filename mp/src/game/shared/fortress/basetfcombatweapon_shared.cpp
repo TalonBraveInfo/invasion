@@ -6,7 +6,7 @@
 #if !defined( CLIENT_DLL )
 #include "soundent.h"
 #else
-#include "FunctionProxy.h"
+#include "functionproxy.h"
 #include "ivrenderview.h"
 #include "cl_animevent.h"
 #include "fx.h"

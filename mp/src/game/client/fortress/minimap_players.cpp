@@ -12,10 +12,10 @@
 #include <KeyValues.h>
 #include "vgui_bitmapimage.h"
 #include "ViewConeImage.h"
-#include "vguimatsurface/IMatSystemSurface.h"
+#include "VGuiMatSurface/IMatSystemSurface.h"
 #include "shareddefs.h"
 #include "voice_status.h"
-#include "IClientVehicle.h"
+#include "iclientvehicle.h"
 
 //-----------------------------------------------------------------------------
 // Minimap panel representing players

@@ -13,7 +13,7 @@
 
 #include <vgui_controls/Panel.h>
 #include <vgui_controls/PHandle.h>
-#include "UtlVector.h"
+#include "utlvector.h"
 
 class C_BaseTFPlayer;
 class C_BaseEntity;

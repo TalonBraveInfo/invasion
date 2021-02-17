@@ -11,7 +11,7 @@
 #include "tf_team.h"
 #include "techtree.h"
 #include "tf_shield.h"
-#include "VGuiScreen.h"
+#include "vguiscreen.h"
 
 //-----------------------------------------------------------------------------
 // Shield wall defines

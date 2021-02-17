@@ -5,20 +5,20 @@
 // $NoKeywords: $
 //=============================================================================//
 #include "cbase.h"
-#include "AI_Task.h"
-#include "AI_Default.h"
-#include "AI_Schedule.h"
-#include "AI_Hull.h"
-#include "AI_Hint.h"
-#include "AI_Navigator.h"
-#include "AI_Memory.h"
-#include "AI_Squad.h"
+#include "ai_task.h"
+#include "ai_default.h"
+#include "ai_schedule.h"
+#include "ai_hull.h"
+#include "ai_hint.h"
+#include "ai_navigator.h"
+#include "ai_memory.h"
+#include "ai_squad.h"
 #include "activitylist.h"
 #include "soundent.h"
 #include "game.h"
-#include "NPCEvent.h"
+#include "npcevent.h"
 #include "tf_player.h"
-#include "EntityList.h"
+#include "entitylist.h"
 #include "ndebugoverlay.h"
 #include "shake.h"
 #include "monstermaker.h"
@@ -26,7 +26,7 @@
 #include "vstdlib/random.h"
 #include "tf_obj.h"
 #include "engine/IEngineSound.h"
-#include "ieffects.h"
+#include "IEffects.h"
 #include "npc_bug_warrior.h"
 #include "npc_bug_hole.h"
 
@@ -323,15 +323,16 @@ void CNPC_Bug_Warrior::StartTask( const Task_t *pTask )
 
 			// We're fleeing from an enemy.
 			// If I have a squadmate, run to him.
-			CAI_BaseNPC *pSquadMate;
-			if ( m_pSquad && (pSquadMate = m_pSquad->NearestSquadMember(this)) != false )
+			if ( m_pSquad != nullptr )
 			{
-				SetTarget( pSquadMate );
-				AI_NavGoal_t goal( GOALTYPE_TARGETENT, vec3_origin, ACT_RUN );
-				if ( GetNavigator()->SetGoal( goal ) )
-				{
-					TaskComplete();
-					return;
+				CAI_BaseNPC *pSquadMate = m_pSquad->NearestSquadMember( this );
+				if( pSquadMate != nullptr ) {
+					SetTarget( pSquadMate );
+					AI_NavGoal_t goal( GOALTYPE_TARGETENT, vec3_origin, ACT_RUN );
+					if( GetNavigator()->SetGoal( goal ) ) {
+						TaskComplete();
+						return;
+					}
 				}
 			}
 
@@ -505,7 +506,7 @@ void CNPC_Bug_Warrior::Event_Killed( const CTakeDamageInfo &info )
 //-----------------------------------------------------------------------------
 // Purpose: 
 //-----------------------------------------------------------------------------
-void CNPC_Bug_Warrior::MeleeAttack( float distance, float damage, QAngle& viewPunch, Vector& shove )
+void CNPC_Bug_Warrior::MeleeAttack( float distance, float damage, const QAngle& viewPunch, const Vector& shove )
 {
 	if ( GetEnemy() == NULL )
 		return;
@@ -561,8 +562,10 @@ void CNPC_Bug_Warrior::HandleAnimEvent( animevent_t *pEvent )
 	switch ( pEvent->event )
 	{
 	case BUG_WARRIOR_AE_MELEE_HIT1:
-		MeleeAttack( BUG_WARRIOR_MELEE1_RANGE, npc_bug_warrior_swipe_damage.GetFloat(), QAngle( 20.0f, 0.0f, 0.0f ), Vector( -350.0f, 1.0f, 1.0f ) );
-		return;
+		{
+			MeleeAttack( BUG_WARRIOR_MELEE1_RANGE, npc_bug_warrior_swipe_damage.GetFloat(), QAngle( 20.0f, 0.0f, 0.0f ), Vector( -350.0f, 1.0f, 1.0f ) );
+			return;
+		}
 		break;
 
 	case BUG_WARRIOR_AE_MELEE_SOUND1:

@@ -10,7 +10,7 @@
 #include "engine/IEngineSound.h"
 #include "view.h"
 #include "beamdraw.h"
-#include "ClientEffectPrecacheSystem.h"
+#include "clienteffectprecachesystem.h"
 #include "weapon_combat_usedwithshieldbase.h"
 #include "c_weapon__stubs.h"
 #include <vgui/ISurface.h>

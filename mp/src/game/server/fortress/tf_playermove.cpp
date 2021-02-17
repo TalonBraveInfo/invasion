@@ -7,7 +7,7 @@
 #include "tf_movedata.h"
 #include "tf_class_recon.h"
 #include "tf_reconvars.h"
-#include "IserverVehicle.h"
+#include "iservervehicle.h"
 #include "tf_class_commando.h"
 #include "ipredictionsystem.h"
 

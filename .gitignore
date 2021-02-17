@@ -25,6 +25,7 @@ ipch
 *.mak.vpc_crc
 *.xcodeproj/
 !devtools/*.mak
+devtools/makefile_base_posix.mak.link
 !utils/smdlexp/smdlexp.mak
 
 # Specific Source build products
@@ -108,3 +109,6 @@ mp/src/game/client/Debug_invasion/
 *.rehex-meta
 *.ztmp
 *.pdb
+
+# Build support files
+devtools/gcc9+support.o

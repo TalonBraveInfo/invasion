@@ -1,6 +1,6 @@
 #include "cbase.h"
 #include "hud.h"
-#include "commanderoverlay.h"
+#include "CommanderOverlay.h"
 #include "c_baseobject.h"
 
 // memdbgon must be the last include file in a .cpp file!!!

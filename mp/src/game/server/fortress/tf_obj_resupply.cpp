@@ -10,7 +10,7 @@
 #include "engine/IEngineSound.h"
 #include "tf_player.h"
 #include "tf_team.h"
-#include "VGuiScreen.h"
+#include "vguiscreen.h"
 #include "world.h"
 
 #define RESUPPLY_HEAL_AMT				100

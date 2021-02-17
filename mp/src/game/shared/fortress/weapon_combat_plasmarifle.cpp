@@ -17,7 +17,7 @@
 
 #include "iefx.h"
 #include "dlight.h"
-#include "ClientEffectPrecacheSystem.h"
+#include "clienteffectprecachesystem.h"
 #include "beamdraw.h"
 
 #define CWeaponCombatPlasmaRifle C_WeaponCombatPlasmaRifle

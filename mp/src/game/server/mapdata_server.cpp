@@ -1,7 +1,7 @@
 #include "cbase.h"
 
 #include "mapdata_shared.h"
-#include "sharedinterface.h"
+#include "sharedInterface.h"
 #include "baseentity.h"
 #include "world.h"
 #include "player.h"

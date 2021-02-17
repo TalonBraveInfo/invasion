@@ -11,10 +11,10 @@
 #include "c_weapon__stubs.h"
 #include "iinput.h"
 #include "ObjectControlPanel.h"
-#include <vgui/IVGUI.h>
+#include <vgui/IVGui.h>
 
 #include "vgui_bitmapimage.h"
-#include "vgui_BitmapPanel.h"
+#include "vgui_bitmappanel.h"
 
 
 //-----------------------------------------------------------------------------

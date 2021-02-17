@@ -346,18 +346,18 @@ bool IsObjectADefensiveBuilding( int iObjectType )
 #if defined( CLIENT_DLL )
 	
 	#define DEFINE_PLAYERCLASS_ALLOC_FNS( className, iClass )				\
-		C_PlayerClass* AllocClient##className##( C_BaseTFPlayer *pPlayer )	\
+		C_PlayerClass* AllocClient##className( C_BaseTFPlayer *pPlayer )	\
 		{																	\
-			return new C_PlayerClass##className##( pPlayer );				\
+			return new C_PlayerClass##className( pPlayer );					\
 		}																	\
-		CPlayerClass* AllocServer##className##( CBaseTFPlayer *pPlayer )	\
+		CPlayerClass* AllocServer##className( CBaseTFPlayer *pPlayer )		\
 		{																	\
 			Assert( false );												\
 			return NULL;													\
 		}
 
 	#define GENERATE_PLAYERCLASS_INFO( className )		\
-		AllocClient##className##, AllocServer##className, NULL
+		AllocClient##className, AllocServer##className, NULL
 
 
 	// ------------------------------------------------------------------------------------- //
@@ -380,18 +380,18 @@ bool IsObjectADefensiveBuilding( int iObjectType )
 
 	#define DEFINE_PLAYERCLASS_ALLOC_FNS( className, iClass )				\
 		ConVar class_##className##_health( "class_" #className "_health", "0", FCVAR_NONE, #className "'s max health" ); \
-		C_PlayerClass* AllocClient##className##( C_BaseTFPlayer *pPlayer )	\
+		C_PlayerClass* AllocClient##className( C_BaseTFPlayer *pPlayer )	\
 		{																	\
 			Assert( false );												\
 			return NULL;													\
 		}																	\
-		CPlayerClass* AllocServer##className##( CBaseTFPlayer *pPlayer )	\
+		CPlayerClass* AllocServer##className( CBaseTFPlayer *pPlayer )		\
 		{																	\
-			return new CPlayerClass##className##( pPlayer, iClass );		\
-		}																	
+			return new CPlayerClass##className( pPlayer, iClass );			\
+		}
 
 	#define GENERATE_PLAYERCLASS_INFO( className )		\
-		AllocClient##className##, AllocServer##className, &class_##className##_health
+		AllocClient##className, AllocServer##className, &class_##className##_health
 
 
 	// ------------------------------------------------------------------------------------- //

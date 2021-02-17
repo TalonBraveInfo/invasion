@@ -99,7 +99,7 @@ public:
 	void			StopPlacement( void );
 	bool			FindNearestBuildPoint( CBaseEntity *pEntity, CBaseTFPlayer *pBuilder, Vector vecBuildOrigin, float &flNearestPoint, Vector &vecNearestBuildPoint );
 	virtual bool	CalculatePlacement( CBaseTFPlayer *pPlayer );
-	bool			CheckBuildPoint( Vector vecPoint, Vector &vecTrace, Vector *vecOutPoint=NULL );
+	bool 			CheckBuildPoint( const Vector &vecPoint, const Vector &vecTrace, Vector *vecOutPoint = NULL );
 	bool			VerifyCorner( const Vector &vBottomCenter, float xOffset, float yOffset );
 	virtual bool	CheckBuildOrigin( CBaseTFPlayer *pPlayer, const Vector &vecBuildOrigin, bool bSnappedToPoint = false );
 	void			AttemptToFindPower( void );

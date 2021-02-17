@@ -12,7 +12,7 @@
 #include "tf_player.h"
 #include "utlbuffer.h"
 #include "filesystem.h"
-#include "IGameSystem.h"
+#include "igamesystem.h"
 #include "textstatsmgr.h"
 #include "info_act.h"
 

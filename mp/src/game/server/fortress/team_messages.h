@@ -4,7 +4,7 @@
 #pragma once
 #endif
 
-#include "UtlSymbol.h"
+#include "utlsymbol.h"
 
 // Message IDs
 enum

@@ -11,7 +11,7 @@
 #include "basetfplayer_shared.h"
 #include "in_buttons.h"
 #include "weapon_combatshield.h"
-#include "engine/ienginesound.h"
+#include "engine/IEngineSound.h"
 #include "grenade_base_empable.h"
 #include "basetfvehicle.h"
 #include "tf_gamerules.h"

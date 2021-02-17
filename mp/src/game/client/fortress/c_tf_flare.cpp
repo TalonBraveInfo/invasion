@@ -9,10 +9,10 @@
 #include "cmodel.h"
 #include "view.h"
 #include "clientsideeffects.h"
-#include "ClientEffectPrecacheSystem.h"
+#include "clienteffectprecachesystem.h"
 #include "particles_simple.h"
 #include "particlemgr.h"
-#include "IEFx.h"
+#include "iefx.h"
 
 //Precahce the effects
 CLIENTEFFECT_REGISTER_BEGIN( PrecacheEffectFlares )

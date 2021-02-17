@@ -7,7 +7,7 @@
 #include "cbase.h"
 #include "hud.h"
 #include "basegrenade_shared.h"
-#include "ieffects.h"
+#include "IEffects.h"
 #include "c_baseplayer.h"
 
 extern ConVar	lod_effect_distance;

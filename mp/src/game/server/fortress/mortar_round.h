@@ -37,7 +37,7 @@ public:
 	// Damage type accessors
 	virtual int GetDamageType() const { return DMG_BLAST; }
 
-	static CMortarRound* CMortarRound::Create( const Vector &vecOrigin, const Vector &vecVelocity, edict_t *pentOwner );
+	static CMortarRound* Create( const Vector &vecOrigin, const Vector &vecVelocity, edict_t *pentOwner );
 
 	SmokeTrail				*m_pSmokeTrail;
 	CHandle<CVehicleMortar>	m_pLauncher;

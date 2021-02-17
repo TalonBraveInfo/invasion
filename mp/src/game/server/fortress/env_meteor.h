@@ -9,9 +9,9 @@
 #define ENV_METEOR_H
 #pragma once
 
-#include "BaseEntity.h"
-#include "BaseAnimating.h"
-#include "Env_Meteor_Shared.h"
+#include "baseentity.h"
+#include "baseanimating.h"
+#include "env_meteor_shared.h"
 #include "utlvector.h"
 
 //=============================================================================

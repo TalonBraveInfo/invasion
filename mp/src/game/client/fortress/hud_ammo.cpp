@@ -159,10 +159,10 @@ public:
 
 	virtual bool		_GetValue( char *val, int maxlen )
 	{
-		Q_snprintf( val, maxlen, "" );
-
-		if ( !GetHudAmmo()->ShouldShowPrimaryClip() )
+		if ( !GetHudAmmo()->ShouldShowPrimaryClip() ) {
+			Q_snprintf( val, maxlen, "" );
 			return false;
+		}
 
 		int count = GetHudAmmo()->m_nTotalAmmo1;
 		Q_snprintf( val, maxlen, "%i", count );

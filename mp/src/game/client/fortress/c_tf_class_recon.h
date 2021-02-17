@@ -12,7 +12,7 @@
 #endif
 
 #include "c_tf_playerclass.h"
-#include "TFClassData_Shared.h"
+#include "tfclassdata_shared.h"
 #include "dt_recv.h"
 
 class C_PlayerClassRecon : public C_PlayerClass

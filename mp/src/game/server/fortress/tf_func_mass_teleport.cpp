@@ -10,7 +10,7 @@
 #include "tf_team.h"
 #include "basetfvehicle.h"
 #include "team_spawnpoint.h"
-#include "NDebugOverlay.h"
+#include "ndebugoverlay.h"
 #include "tf_vehicle_teleport_station.h"
 #include "tf_gamerules.h"
 

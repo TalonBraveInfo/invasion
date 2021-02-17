@@ -40,7 +40,7 @@ public:
 
 	void CleanUp();
 
-	static CGrenadeObjectSapper *CGrenadeObjectSapper::Create( const Vector &vecOrigin, const Vector &vecAngles, CBasePlayer *pOwner, CBaseObject *pObject );
+	static CGrenadeObjectSapper *Create( const Vector &vecOrigin, const Vector &vecAngles, CBasePlayer *pOwner, CBaseObject *pObject );
 
 public:
 	CNetworkVar( bool, m_bSapping );

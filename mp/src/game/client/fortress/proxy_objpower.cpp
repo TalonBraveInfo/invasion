@@ -5,12 +5,12 @@
 //=============================================================================//
 
 #include "cbase.h"
-#include "materialsystem/IMaterial.h"
-#include "materialsystem/IMaterialSystem.h"
+#include "materialsystem/imaterial.h"
+#include "materialsystem/imaterialsystem.h"
 #include <KeyValues.h>
-#include "materialsystem/IMaterialVar.h"
-#include "C_BaseTFPlayer.h"
-#include "FunctionProxy.h"
+#include "materialsystem/imaterialvar.h"
+#include "c_basetfplayer.h"
+#include "functionproxy.h"
 #include "c_baseobject.h"
 
 // memdbgon must be the last include file in a .cpp file!!!

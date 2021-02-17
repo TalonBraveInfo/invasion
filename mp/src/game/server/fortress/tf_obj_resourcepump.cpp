@@ -16,7 +16,7 @@ Copyright (C) 2014-2016 TalonBrave.info
 #include "sendproxy.h"
 #include "vstdlib/random.h"
 #include "tf_stats.h"
-#include "VGuiScreen.h"
+#include "vguiscreen.h"
 #include "engine/IEngineSound.h"
 
 BEGIN_DATADESC( CObjectResourcePump )

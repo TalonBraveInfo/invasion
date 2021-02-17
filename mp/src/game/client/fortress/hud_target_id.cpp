@@ -10,9 +10,9 @@
 #include "imessagechars.h"
 #include "c_basetfplayer.h"
 #include "c_playerresource.h"
-#include "vgui_EntityPanel.h"
+#include "vgui_entitypanel.h"
 #include "vgui_healthbar.h"
-#include "commanderoverlay.h"
+#include "CommanderOverlay.h"
 #include "c_baseobject.h"
 #include "iclientmode.h"
 

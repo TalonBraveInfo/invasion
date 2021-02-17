@@ -7,8 +7,8 @@
 #include "cbase.h"
 #include "c_gasoline_blob.h"
 #include "gasoline_shared.h"
-#include "engine/ienginesound.h"
-#include "ClientEffectPrecacheSystem.h"
+#include "engine/IEngineSound.h"
+#include "clienteffectprecachesystem.h"
 
 static CUtlLinkedList<C_GasolineBlob*, int> g_GasolineBlobs;
 

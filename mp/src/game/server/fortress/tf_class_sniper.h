@@ -9,7 +9,7 @@
 #define TF_CLASS_SNIPER_H
 #pragma once
 
-#include "TFClassData_Shared.h"
+#include "tfclassdata_shared.h"
 
 
 //=====================================================================

@@ -7,7 +7,6 @@
 
 
 #include "tier0/fasttimer.h"
-#include <crtdbg.h>
 
 class CPlayerClassData;
 class CPlayerClass;
@@ -16,6 +15,18 @@ class COrder;
 class CBaseObject;
 class CBaseTechnology;
 class CWeaponCombatShield; 
+
+#if _WIN32
+#include <crtdbg.h>
+#else
+static inline void* _malloc_dbg(size_t stAllocateBlock, int nBlockUse, const char *pFileName, int nLine)
+{
+	(void)nBlockUse;
+	(void)pFileName;
+	(void)nLine;
+	return malloc(stAllocateBlock);
+}
+#endif
 
 
 enum ResupplyReason_t

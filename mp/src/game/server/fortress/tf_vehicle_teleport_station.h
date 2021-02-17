@@ -12,7 +12,7 @@
 
 #include "tf_basefourwheelvehicle.h"
 #include "vphysics/vehicles.h"
-#include "sprite.h"
+#include "Sprite.h"
 #include "tf_func_mass_teleport.h"
 
 

@@ -13,7 +13,7 @@
 #endif
 
 #include "tf_playerclass.h"
-#include "TFClassData_Shared.h"
+#include "tfclassdata_shared.h"
 #include "basetfcombatweapon_shared.h"
 
 //=====================================================================

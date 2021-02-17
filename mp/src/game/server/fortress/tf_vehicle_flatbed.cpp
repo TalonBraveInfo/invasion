@@ -8,7 +8,7 @@
 #include "cbase.h"
 #include "tf_vehicle_flatbed.h"
 #include "engine/IEngineSound.h"
-#include "VGuiScreen.h"
+#include "vguiscreen.h"
 #include "ammodef.h"
 #include "in_buttons.h"
 

@@ -4,8 +4,8 @@
 #pragma once
 #endif
 
-#include "UtlVector.h"
-#include "IGameMovement.h"
+#include "utlvector.h"
+#include "igamemovement.h"
 #include "tf_gamemovement.h"
 #include "tf_gamemovement_recon.h"
 #include "tf_gamemovement_commando.h"

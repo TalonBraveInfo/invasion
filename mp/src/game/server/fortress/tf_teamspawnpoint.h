@@ -10,7 +10,7 @@
 #pragma once
 
 #include "baseentity.h"
-#include "EntityOutput.h"
+#include "entityoutput.h"
 
 class CTeam;
 

@@ -14,7 +14,7 @@
 
 
 #include "tf_playerclass.h"
-#include "TFClassData_Shared.h"
+#include "tfclassdata_shared.h"
 #include "tf_shieldshared.h"
 
 class CShield;

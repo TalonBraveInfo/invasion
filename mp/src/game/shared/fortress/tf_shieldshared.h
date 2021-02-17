@@ -13,9 +13,9 @@
 
 #include "mathlib/mathlib.h"
 #include "mathlib/vector.h"
-#include "mathlib/VMatrix.h"
-#include "UtlVector.h"
-#include "SheetSimulator.h"
+#include "mathlib/vmatrix.h"
+#include "utlvector.h"
+#include "sheetsimulator.h"
 #include "predictable_entity.h"
 
 
@@ -172,7 +172,7 @@ public:
 private:
 	// Simulation set up
 	void ComputeRestPositions();
-	void SetShieldPanelSize( Vector& mins, Vector& maxs );
+	void SetShieldPanelSize( const Vector& mins, const Vector& maxs );
 	void SimulateTranslation( float dt );
 	void SimulateRotation( float dt, const Vector& forward );
 	void ComputeOrientationMatrix();

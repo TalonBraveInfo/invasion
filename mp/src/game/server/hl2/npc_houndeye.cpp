@@ -15,7 +15,7 @@
 #include "ai_squad.h"
 #include "AI_TacticalServices.h"
 #include "soundent.h"
-#include "EntityList.h"
+#include "entitylist.h"
 #include "game.h"
 #include "activitylist.h"
 #include "hl2_shareddefs.h"

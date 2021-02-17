@@ -10,7 +10,7 @@
 #include "c_obj_mapdefined.h"
 #include "minimap_trace.h"
 #include <KeyValues.h>
-#include "vguimatsurface/IMatSystemSurface.h"
+#include "VGuiMatSurface/IMatSystemSurface.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"

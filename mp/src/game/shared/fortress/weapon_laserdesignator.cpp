@@ -5,7 +5,7 @@
 // $NoKeywords: $
 //=============================================================================//
 #include "cbase.h"
-#include "NPCEvent.h"
+#include "npcevent.h"
 #include "tf_basecombatweapon.h"
 #include "smoke_trail.h"
 #include "tf_player.h"

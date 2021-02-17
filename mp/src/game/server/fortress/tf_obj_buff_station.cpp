@@ -10,7 +10,7 @@
 #include "rope.h"
 #include "rope_shared.h"
 #include "entitylist.h"
-#include "VGuiScreen.h"
+#include "vguiscreen.h"
 #include "engine/IEngineSound.h"
 #include "tf_team.h"
 

@@ -18,7 +18,7 @@ Copyright (C) 2014-2016 TalonBrave.info
 #include "tf_stats.h"
 #include "rope.h"
 #include "tf_shareddefs.h"
-#include "VGuiScreen.h"
+#include "vguiscreen.h"
 #include "hierarchy.h"
 
 IMPLEMENT_SERVERCLASS_ST( CObjectPowerPack, DT_ObjectPowerPack )

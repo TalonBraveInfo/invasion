@@ -7,7 +7,7 @@
 
 #include "cbase.h"
 #include "filters.h"
-#include "EntityList.h"
+#include "entitylist.h"
 #include "info_act.h"
 
 //-----------------------------------------------------------------------------

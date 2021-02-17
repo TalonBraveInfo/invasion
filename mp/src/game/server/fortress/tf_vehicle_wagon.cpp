@@ -8,7 +8,7 @@
 #include "cbase.h"
 #include "tf_vehicle_wagon.h"
 #include "engine/IEngineSound.h"
-#include "VGuiScreen.h"
+#include "vguiscreen.h"
 
 
 #define WAGON_MINS			Vector(-30, -50, -10)

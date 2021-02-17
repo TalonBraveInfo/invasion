@@ -8,7 +8,7 @@
 #include "tf_obj_barbed_wire.h"
 #include "tf_player.h"
 #include "basetfvehicle.h"
-#include "engine/ienginesound.h"
+#include "engine/IEngineSound.h"
 #include "te_effect_dispatch.h"
 #include "ndebugoverlay.h"
 

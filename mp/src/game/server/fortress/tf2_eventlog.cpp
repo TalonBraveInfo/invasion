@@ -1,6 +1,6 @@
 #include "cbase.h"
-#include "../eventlog.h"
-#include <keyvalues.h>
+#include "../EventLog.h"
+#include <KeyValues.h>
 
 class CTF2EventLog : public CEventLog
 {

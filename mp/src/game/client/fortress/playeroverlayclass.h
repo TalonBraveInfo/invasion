@@ -18,7 +18,7 @@
 #pragma once
 #endif
 
-#include "vgui_BasePanel.h"
+#include "vgui_basepanel.h"
 
 class BitmapImage;
 class KeyValues;

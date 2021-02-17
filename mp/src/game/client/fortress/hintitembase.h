@@ -23,13 +23,13 @@ namespace vgui
 }
 
 #define DECLARE_HINTITEMFACTORY( className ) \
-	CHintItemBase *Create_##className##( vgui::Panel *parent, const char *panelName ) \
+	CHintItemBase *Create_##className( vgui::Panel *parent, const char *panelName ) \
 	{ return new className( parent, panelName ); }
 
 #define GET_HINTITEMFACTORY_NAME( className ) Create_##className
 
 #define DECLARE_HINTFACTORY( className ) \
-	C_TFBaseHint *Create_##className##( int id, int entity ) \
+	C_TFBaseHint *Create_##className( int id, int entity ) \
 	{ return new className( id, 0, entity, NULL ); }
 
 #define GET_HINTFACTORY_NAME( className ) Create_##className

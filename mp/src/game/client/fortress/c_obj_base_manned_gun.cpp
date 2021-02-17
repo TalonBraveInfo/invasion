@@ -10,7 +10,7 @@
 #include "tf_movedata.h"
 #include "bone_setup.h"
 #include "hud_ammo.h"
-#include "VGUI_BitmapButton.h"
+#include "vgui_bitmapbutton.h"
 
 extern ConVar mannedgun_usethirdperson;
 

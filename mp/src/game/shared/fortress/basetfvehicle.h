@@ -16,9 +16,9 @@
 #include "tf_obj_basedrivergun_shared.h"
 
 #if defined( CLIENT_DLL )
-#include "IClientVehicle.h"
+#include "iclientvehicle.h"
 #else
-#include "IServerVehicle.h"
+#include "iservervehicle.h"
 #endif
 
 

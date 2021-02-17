@@ -12,7 +12,7 @@
 #include "clientmode_tfnormal.h"
 #include <vgui_controls/Controls.h>
 #include <vgui/ISurface.h>
-#include "ClientEffectPrecacheSystem.h"
+#include "clienteffectprecachesystem.h"
 #include "tier0/vprof.h"
 
 #define MAX_DOWN_DIST	300

@@ -6,7 +6,7 @@
 
 #include <vgui_controls/Panel.h>
 #include <vgui_controls/EditablePanel.h>
-#include "UtlVector.h"
+#include "utlvector.h"
 
 class CPanelEffect;
 class ITFHintItem;

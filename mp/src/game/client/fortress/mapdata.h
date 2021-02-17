@@ -21,7 +21,7 @@
 #include "maxplayers.h"
 #include "mathlib/vector.h"
 #include "mapdata_shared.h"
-#include "sharedinterface.h"
+#include "sharedInterface.h"
 
 #define MAX_ZONES		32
 #define MAX_CLASSES		32

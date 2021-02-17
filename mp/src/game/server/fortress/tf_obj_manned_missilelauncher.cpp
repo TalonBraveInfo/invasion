@@ -18,7 +18,7 @@
 #include "tf_gamerules.h"
 #include "plasmaprojectile.h"
 #include "tf_movedata.h"
-#include "VGuiScreen.h"
+#include "vguiscreen.h"
 #include "weapon_grenade_rocket.h"
 #include "tf_obj_manned_missilelauncher.h"
 

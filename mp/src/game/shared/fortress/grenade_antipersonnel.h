@@ -38,7 +38,7 @@ public:
 	// Damage type accessors
 	virtual int GetDamageType() const { return DMG_BLAST; }
 
-	static CGrenadeAntiPersonnel *CGrenadeAntiPersonnel::Create( const Vector &vecOrigin, const Vector &vecAngles, CBasePlayer *pOwner );
+	static CGrenadeAntiPersonnel *Create( const Vector &vecOrigin, const Vector &vecAngles, CBasePlayer *pOwner );
 
 	void	SetExplodeOnContact( bool bExplode ) { m_bExplodeOnContact = bExplode; }
 

@@ -7,7 +7,7 @@
 #include "cbase.h"
 #include "tf_vehicle_siege_tower.h"
 #include "engine/IEngineSound.h"
-#include "VGuiScreen.h"
+#include "vguiscreen.h"
 #include "ammodef.h"
 #include "in_buttons.h"
 
@@ -118,7 +118,8 @@ void CVehicleSiegeTower::InternalDeploy( void )
 	if ( !Deploy() )
 		return;
 
-	InputTurnOff( inputdata_t() );
+	inputdata_t inputdata;
+	InputTurnOff( inputdata );
 
 	// Create the ladder.
 	Vector vecOrigin;
@@ -134,7 +135,8 @@ void CVehicleSiegeTower::InternalUnDeploy( void )
 {
 	// Undeploy
 	UnDeploy();
-	InputTurnOn( inputdata_t() );
+	inputdata_t inputdata;
+	InputTurnOn( inputdata );
 
 	// Destory the ladder.
 	DestroyLadder();

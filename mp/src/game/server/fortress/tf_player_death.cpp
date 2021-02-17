@@ -6,7 +6,7 @@
 #include "tf_player.h"
 #include "gamerules.h"
 #include "basecombatweapon.h"
-#include "EntityList.h"
+#include "entitylist.h"
 #include "tf_shareddefs.h"
 #include "tf_team.h"
 #include "baseviewmodel.h"

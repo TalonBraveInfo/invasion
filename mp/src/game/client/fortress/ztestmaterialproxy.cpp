@@ -6,8 +6,8 @@
 //=============================================================================//
 #include "cbase.h"
 #include "materialsystem/IMaterialProxy.h"
-#include "materialsystem/IMaterial.h"
-#include "materialsystem/IMaterialVar.h"
+#include "materialsystem/imaterial.h"
+#include "materialsystem/imaterialvar.h"
 
 // $sineVar : name of variable that controls the alpha level (float)
 class CzTestMaterialProxy : public IMaterialProxy

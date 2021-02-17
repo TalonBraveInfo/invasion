@@ -5,8 +5,8 @@
 // $NoKeywords: $
 //=============================================================================
 #include "cbase.h"
-#include "EntityOutput.h"
-#include "EntityList.h"
+#include "entityoutput.h"
+#include "entitylist.h"
 #include "tf_team.h"
 #include "techtree.h"
 #include "info_customtech.h"

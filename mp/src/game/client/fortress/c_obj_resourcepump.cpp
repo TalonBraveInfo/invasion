@@ -1,12 +1,12 @@
 #include "cbase.h"
 #include "hud.h"
 #include "c_obj_resourcepump.h"
-#include "commanderoverlay.h"
+#include "CommanderOverlay.h"
 #include "vgui_healthbar.h"
 #include "ObjectControlPanel.h"
 #include "tf_shareddefs.h"
-#include "VGUI_BitmapButton.h"
-#include "C_Func_Resource.h"
+#include "vgui_bitmapbutton.h"
+#include "c_func_resource.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"

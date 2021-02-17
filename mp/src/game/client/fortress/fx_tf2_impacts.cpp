@@ -4,7 +4,7 @@
 #include "cbase.h"
 #include "fx_impact.h"
 #include "decals.h"
-#include "ieffects.h"
+#include "IEffects.h"
 #include "c_breakableprop.h"
 #include "tempent.h"
 #include "c_te_legacytempents.h"

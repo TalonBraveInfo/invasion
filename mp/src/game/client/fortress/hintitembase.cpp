@@ -12,7 +12,7 @@ Copyright (C) 2014-2017 TalonBrave.info
 #include <vgui/IScheme.h>
 #include <vgui/ILocalize.h>
 #include <KeyValues.h>
-#include "PanelEffect.h"
+#include "paneleffect.h"
 
 //-----------------------------------------------------------------------------
 // Purpose: Constructor

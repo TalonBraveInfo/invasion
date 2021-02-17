@@ -12,7 +12,7 @@
 #include <vgui_controls/Button.h>
 #include "vgui_rotation_slider.h"
 #include <vgui/ISurface.h>
-#include "vgui_BasePanel.h"
+#include "vgui_basepanel.h"
 #include "ground_line.h"
 #include "hud_minimap.h"
 #include "vgui_bitmapimage.h"

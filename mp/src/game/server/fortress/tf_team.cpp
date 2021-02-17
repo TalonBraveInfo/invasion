@@ -529,7 +529,7 @@ void CTFTeam::RecomputePreferences( void )
 
 		if ( preferred < 0 || preferred >= MAX_TECHNOLOGIES )
 		{
-			Msg( "Player %s tried to set preference to out of range tech %i\n", preferred );
+			Msg( "Player %s tried to set preference to out of range tech %i\n", STRING( pPlayer->pl.netname ), preferred );
 			continue;
 		}
 
@@ -539,7 +539,7 @@ void CTFTeam::RecomputePreferences( void )
 		if ( !technology )
 			continue;
 
-		// Msg( "player %s prefers %s\n", STRING( pPlayer->pl->netname ), technology->GetPrintName() );
+		// Msg( "player %s prefers %s\n", STRING( pPlayer->pl.netname ), technology->GetPrintName() );
 
 		// Add one vote
 		technology->IncrementPreferences();

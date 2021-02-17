@@ -13,7 +13,7 @@
 #endif
 
 #include "baseentity.h"
-#include "UtlVector.h"
+#include "utlvector.h"
 
 
 //-----------------------------------------------------------------------------

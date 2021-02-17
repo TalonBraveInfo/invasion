@@ -2500,7 +2500,8 @@ void CClientShadowMgr::BuildRenderToTextureShadow( IClientRenderable* pRenderabl
 			fProjMax = fLengthSqr;
 			yvec = test;
 		}
-	}		
+	}
+	AssertMsg( fProjMax > 0.0f, "Shadow direction is zero." );
 
 	VectorNormalize( yvec );
 

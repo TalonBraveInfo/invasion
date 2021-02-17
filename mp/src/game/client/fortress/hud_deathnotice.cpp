@@ -9,8 +9,8 @@
 #include "hudelement.h"
 #include "c_playerresource.h"
 #include "iclientmode.h"
-#include <vgui_controls/controls.h>
-#include <vgui_controls/panel.h>
+#include <vgui_controls/Controls.h>
+#include <vgui_controls/Panel.h>
 #include <vgui/ISurface.h>
 #include <vgui/ILocalize.h>
 #include <game/client/iviewport.h>
@@ -317,7 +317,7 @@ void CHudDeathNotice::FireGameEvent( IGameEvent *event ) {
 		Q_strncat( sDeathMsg, VarArgs( " with %s.\n", fullkilledwith + 2 ), sizeof( sDeathMsg ), COPY_ALL_CHARACTERS );
 	}
 
-	Msg( sDeathMsg );
+	Msg( "%s", sDeathMsg );
 }
 
 

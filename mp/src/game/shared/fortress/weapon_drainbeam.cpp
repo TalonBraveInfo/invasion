@@ -8,7 +8,7 @@
 #include "basetfplayer_shared.h"
 #include "in_buttons.h"
 #include "weapon_combatshield.h"
-#include "engine/ienginesound.h"
+#include "engine/IEngineSound.h"
 #include "grenade_base_empable.h"
 
 #if defined( CLIENT_DLL )

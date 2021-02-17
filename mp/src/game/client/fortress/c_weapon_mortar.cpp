@@ -12,7 +12,7 @@
 #include "in_buttons.h"
 #include "ground_line.h"
 #include "clientmode_tfnormal.h"
-#include "vgui_BasePanel.h"
+#include "vgui_basepanel.h"
 #include "c_tf_basecombatweapon.h"
 #include "engine/IEngineSound.h"
 #include "iinput.h"

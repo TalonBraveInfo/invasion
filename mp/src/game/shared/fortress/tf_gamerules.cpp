@@ -33,7 +33,7 @@
 	#include "igamesystem.h"
 	#include "filesystem.h"
 	#include "info_vehicle_bay.h"
-	#include "IserverVehicle.h"
+	#include "iservervehicle.h"
 	#include "weapon_builder.h"
 	#include "weapon_objectselection.h"
 	#include "ndebugoverlay.h"

@@ -12,9 +12,9 @@
 #include "model_types.h"
 #include "clientmode_tfnormal.h"
 #include <vgui/IVGui.h>
-#include "VGui_BitmapImage.h"
+#include "vgui_bitmapimage.h"
 #include <KeyValues.h>
-#include "vguimatsurface/IMatSystemSurface.h"
+#include "VGuiMatSurface/IMatSystemSurface.h"
 #include "shareddefs.h"
 #include "engine/ivmodelinfo.h"
 

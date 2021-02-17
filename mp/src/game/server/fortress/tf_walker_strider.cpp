@@ -7,7 +7,7 @@
 #include "cbase.h"
 #include "tf_walker_strider.h"
 #include "npcevent.h"
-#include "engine/ienginesound.h"
+#include "engine/IEngineSound.h"
 #include "tf_gamerules.h"
 #include "shake.h"
 #include "in_buttons.h"

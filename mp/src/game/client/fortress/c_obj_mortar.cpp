@@ -15,7 +15,7 @@
 #include <vgui_controls/Button.h>
 #include "vgui_rotation_slider.h"
 #include <vgui/ISurface.h>
-#include "vgui_BasePanel.h"
+#include "vgui_basepanel.h"
 #include "vgui_bitmapimage.h"
 #include "iusesmortarpanel.h"
 

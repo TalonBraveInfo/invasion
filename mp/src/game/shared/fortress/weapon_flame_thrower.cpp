@@ -32,7 +32,7 @@
 #if defined( CLIENT_DLL )
 
 	#include "vstdlib/random.h"
-	#include "engine/ienginesound.h"
+	#include "engine/IEngineSound.h"
 
 	#define FLAMETHROWER_PARTICLES_PER_SEC	100
 

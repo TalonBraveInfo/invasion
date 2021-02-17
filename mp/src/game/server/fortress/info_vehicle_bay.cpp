@@ -1,6 +1,6 @@
 #include "cbase.h"
-#include "EntityOutput.h"
-#include "EntityList.h"
+#include "entityoutput.h"
+#include "entitylist.h"
 #include "tf_obj.h"
 #include "info_vehicle_bay.h"
 #include "tf_player.h"

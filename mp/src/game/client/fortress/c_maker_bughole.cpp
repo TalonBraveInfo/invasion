@@ -6,8 +6,8 @@
 //=============================================================================//
 #include "cbase.h"
 #include "hud.h"
-#include "c_AI_BaseNPC.h"
-#include "ieffects.h"
+#include "c_ai_basenpc.h"
+#include "IEffects.h"
 #include "particles_simple.h"
 
 //-----------------------------------------------------------------------------

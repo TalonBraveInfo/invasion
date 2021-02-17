@@ -20,7 +20,7 @@
 #include "playeroverlay.h"
 #include "playeroverlayname.h"
 #include <KeyValues.h>
-#include "commanderoverlay.h"
+#include "CommanderOverlay.h"
 #include "hud_commander_statuspanel.h"
 #include <vgui/IVGui.h>
 #include <vgui/IScheme.h>

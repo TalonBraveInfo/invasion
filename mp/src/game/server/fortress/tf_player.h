@@ -71,7 +71,6 @@ enum ResupplyReason_t;
 //=====================================================================
 class CBaseTFPlayer : public CBasePlayer, public IScorer
 {
-	typedef CBasePlayer BaseClass;
 public:
 	DECLARE_CLASS( CBaseTFPlayer, CBasePlayer );
 	DECLARE_SERVERCLASS();

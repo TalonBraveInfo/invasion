@@ -15,11 +15,11 @@
 #include "playeroverlayclass.h"
 #include "playeroverlay.h"
 #include <KeyValues.h>
-#include "commanderoverlay.h"
+#include "CommanderOverlay.h"
 #include "clientmode_tfnormal.h"
 #include "tf_shareddefs.h"
 #include "hud_commander_statuspanel.h"
-#include "vgui_BitmapImage.h"
+#include "vgui_bitmapimage.h"
 #include "igamesystem.h"
 
 // memdbgon must be the last include file in a .cpp file!!!

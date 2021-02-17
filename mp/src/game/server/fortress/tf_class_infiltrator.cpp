@@ -15,7 +15,7 @@
 #include "orders.h"
 #include "tf_player.h"
 #include "tf_class_infiltrator.h"
-#include "EntityList.h"
+#include "entitylist.h"
 #include "basecombatweapon.h"
 #include "tf_obj.h"
 #include "tf_team.h"

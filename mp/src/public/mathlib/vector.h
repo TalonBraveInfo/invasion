@@ -374,8 +374,9 @@ public:
 class ALIGN16 VectorAligned : public Vector
 {
 public:
-	inline VectorAligned(void) {};
+	inline VectorAligned(void):w(0) {};
 	inline VectorAligned(vec_t X, vec_t Y, vec_t Z) 
+		: w(0)
 	{
 		Init(X,Y,Z);
 	}

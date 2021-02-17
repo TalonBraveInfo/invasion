@@ -6,7 +6,7 @@
 
 #include "cbase.h"
 #include "engine/IEngineSound.h"
-#include "VGuiScreen.h"
+#include "vguiscreen.h"
 #include "tf_basefourwheelvehicle.h"
 #include "vphysics/vehicles.h"
 

@@ -14,7 +14,7 @@
 #pragma once
 #endif
 
-#include "SplinePatch.h"
+#include "splinepatch.h"
 
 //-----------------------------------------------------------------------------
 // Shield: 

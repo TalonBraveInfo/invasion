@@ -30,7 +30,7 @@ public:
 	// Creation and Initialization
 	virtual void	Spawn( void );
 	virtual void	Precache( void );
-	static CLimpetMine* CLimpetMine::Create( const Vector &vecOrigin, const Vector &vecAngles, CBasePlayer *pOwner );
+	static CLimpetMine* Create( const Vector &vecOrigin, const Vector &vecAngles, CBasePlayer *pOwner );
 	virtual int		GetDamageType() const { return DMG_BLAST; }
 	virtual bool	CanBePoweredUp( void ) { return false; }
 

@@ -9,7 +9,7 @@ Copyright (C) 2014-2017 TalonBrave.info
 #if !defined(CLIENT_DLL)
 #include "tf_player.h"
 #include "tf_basecombatweapon.h"
-#include "EntityList.h"
+#include "entitylist.h"
 #endif
 #include "in_buttons.h"
 #include "weapon_builder.h"

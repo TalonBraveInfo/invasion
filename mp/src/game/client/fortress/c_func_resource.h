@@ -1,7 +1,7 @@
 #ifndef C_FUNC_RESOURCE_H
 #define C_FUNC_RESOURCE_H
 
-#include "commanderoverlay.h"
+#include "CommanderOverlay.h"
 #include "hud_minimap.h"
 
 

@@ -7,7 +7,7 @@
 
 #include "cbase.h"
 #include "triggers.h"
-#include "env_meteor.h "
+#include "env_meteor.h"
 
 //-----------------------------------------------------------------------------
 // 3DSkybox to World Transition Trigger Class

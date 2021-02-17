@@ -13,7 +13,7 @@
 #include "weapon_selection.h"
 #include <KeyValues.h>
 #include "weapon_builder.h"
-#include "vguimatsurface/IMatSystemSurface.h"
+#include "VGuiMatSurface/IMatSystemSurface.h"
 #include "c_tf_hints.h"
 #include "c_hint_events.h"
 #include "c_tf_hintmanager.h"
@@ -321,7 +321,7 @@ const char *CHintDeployWeapon::GetKeyName( void )
 				
 				if ( !stricmp( weapon->GetName(), GetWeaponType() ) )
 				{
-					Q_snprintf( keyname, 128, GetKeyNameForBinding( VarArgs( "slot%i", slot + 1 ) ) );
+					Q_snprintf( keyname, 128, "%s", GetKeyNameForBinding( VarArgs( "slot%i", slot + 1 ) ) );
 					break;
 				}
 			}

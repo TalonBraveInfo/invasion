@@ -10,7 +10,7 @@
 #include "weapon_combat_usedwithshieldbase.h"
 #include "in_buttons.h"
 #include "plasmaprojectile.h"
-#include "ieffects.h"
+#include "IEffects.h"
 
 #if defined( CLIENT_DLL )
 #include "fx.h"

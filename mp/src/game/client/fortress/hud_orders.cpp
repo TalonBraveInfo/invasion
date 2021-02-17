@@ -9,7 +9,7 @@
 #include "hud.h"
 #include "c_basetfplayer.h"
 #include "clientmode_tfnormal.h"
-#include "VGUI_BasePanel.h"
+#include "vgui_basepanel.h"
 #include <vgui/IScheme.h>
 
 // memdbgon must be the last include file in a .cpp file!!!

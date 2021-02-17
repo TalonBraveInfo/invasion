@@ -793,9 +793,9 @@ TeamSchemeAlien
 	
 	CustomFontFiles
 	{
-		1	"resource/fonts/michroma/michroma.ttf"
+		1	"resource/fonts/Michroma.ttf"
 		2	"resource/fonts/electr.ttf"
-		3	"resource/fonts/oswald/Oswald-Regular.ttf"
-		4	"resource/fonts/squada_one/SquadaOne-Regular.ttf"
+		3	"resource/fonts/Oswald-Regular.ttf"
+		4	"resource/fonts/SquadaOne-Regular.ttf"
 	}
 }

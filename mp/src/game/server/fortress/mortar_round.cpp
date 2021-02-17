@@ -7,7 +7,7 @@
 
 #include "cbase.h"
 #include "mortar_round.h"
-#include "engine/ienginesound.h"
+#include "engine/IEngineSound.h"
 #include "tf_gamerules.h"
 #include "tf_team.h"
 

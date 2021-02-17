@@ -6,7 +6,7 @@
 //=============================================================================
 #include "cbase.h"
 #include "c_effect_shootingstar.h"
-#include "ClientEffectPrecacheSystem.h"
+#include "clienteffectprecachesystem.h"
 
 //=============================================================================
 //

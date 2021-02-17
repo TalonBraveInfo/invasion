@@ -23,7 +23,7 @@
 #include "vstdlib/random.h"
 #include "engine/IEngineSound.h"
 #include "grenade_rocket.h"
-#include "VGuiScreen.h"
+#include "vguiscreen.h"
 
 extern short	g_sModelIndexFireball;
 

@@ -40,7 +40,7 @@
 #include "doors.h"
 #include "physics_collisionevent.h"
 #include "gamestats.h"
-#include "vehicle_base.h"
+#include "basetfvehicle.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"
@@ -1611,12 +1611,11 @@ void CBreakableProp::Break( CBaseEntity *pBreaker, const CTakeDamageInfo &info )
 		{
 			bSmashed = true;
 		}
-		else if ( pBreaker && dynamic_cast< CPropVehicleDriveable * >( pBreaker ) )
+		else if ( pBreaker && dynamic_cast< CBaseTFVehicle * >( pBreaker ) )
 		{
-			CPropVehicleDriveable *veh = static_cast< CPropVehicleDriveable * >( pBreaker );
-			CBaseEntity *driver = veh->GetDriver();
-			if ( driver && driver->IsPlayer() )
-			{
+			CBaseTFVehicle *veh = static_cast< CBaseTFVehicle * >( pBreaker );
+			CBaseTFPlayer *driver = veh->GetDriverPlayer();
+			if( driver != nullptr ) {
 				bSmashed = true;
 			}
 		}

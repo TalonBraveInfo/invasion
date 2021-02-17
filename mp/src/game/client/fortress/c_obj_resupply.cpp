@@ -2,7 +2,7 @@
 #include "c_baseobject.h"
 #include "c_basetfplayer.h"
 #include "ObjectControlPanel.h"
-#include "VGUI_BitmapButton.h"
+#include "vgui_bitmapbutton.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"

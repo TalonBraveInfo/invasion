@@ -10,7 +10,7 @@ Copyright (C) 2014-2016 TalonBrave.info
 #include <vgui/IVGui.h>
 #include <vgui/IInput.h>
 #include <vgui_controls/AnimationController.h>
-#include "vgui_BitmapImage.h"
+#include "vgui_bitmapimage.h"
 #include "clientmode_tfbase.h"
 #include "clientmode_tfnormal.h"
 #include "hud.h"

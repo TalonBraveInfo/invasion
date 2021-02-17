@@ -8,7 +8,7 @@
 #include "cbase.h"
 #include "tf_vehicle_tank.h"
 #include "engine/IEngineSound.h"
-#include "VGuiScreen.h"
+#include "vguiscreen.h"
 #include "ammodef.h"
 #include "in_buttons.h"
 #include "vehicle_mortar_shared.h"

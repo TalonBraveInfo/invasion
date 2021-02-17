@@ -5,9 +5,9 @@
 // $NoKeywords: $
 //=============================================================================
 #include "cbase.h"
-#include "ProxyEntity.h"
-#include "materialsystem/IMaterial.h"
-#include "materialsystem/IMaterialVar.h"
+#include "proxyentity.h"
+#include "materialsystem/imaterial.h"
+#include "materialsystem/imaterialvar.h"
 #include "c_baseobject.h"
 #include <KeyValues.h>
 

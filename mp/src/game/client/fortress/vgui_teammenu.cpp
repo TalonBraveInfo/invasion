@@ -2,7 +2,7 @@
 
 #include "vgui_teammenu.h"
 
-#include <vgui/IVGUI.h>
+#include <vgui/IVGui.h>
 
 #include <vgui_controls/RichText.h>
 

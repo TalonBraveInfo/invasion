@@ -49,12 +49,7 @@ void DBG_AssertFunction( bool fExpr, const char *szExpr, const char *szFile, int
 {
 	if (fExpr)
 		return;
-	char szOut[512];
-	if (szMessage != NULL)
-		Q_snprintf(szOut,sizeof(szOut), "ASSERT FAILED:\n %s \n(%s@%d)\n%s", szExpr, szFile, szLine, szMessage);
-	else
-		Q_snprintf(szOut,sizeof(szOut), "ASSERT FAILED:\n %s \n(%s@%d)\n", szExpr, szFile, szLine);
-	Warning( "%s", szOut);
+	Warning("ASSERT FAILED:\n %s \n(%s@%d)\n%s", szExpr, szFile, szLine, szMessage ? szMessage : "");
 }
 #endif	// DEBUG
 

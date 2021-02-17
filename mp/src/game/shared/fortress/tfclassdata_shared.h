@@ -4,6 +4,7 @@
 #pragma once
 #endif
 
+#include "cbase.h"
 #include "mathlib/vector.h"
 
 

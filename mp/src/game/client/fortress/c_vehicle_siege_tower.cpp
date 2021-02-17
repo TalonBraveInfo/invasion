@@ -9,7 +9,7 @@
 #include "tf_movedata.h"
 #include "ObjectControlPanel.h"
 #include <vgui_controls/Label.h>
-#include "VGUI_BitmapButton.h"
+#include "vgui_bitmapbutton.h"
 
 //-----------------------------------------------------------------------------
 // Purpose: 

@@ -1,15 +1,15 @@
 #include "cbase.h"
-#include <VGUI_EntityPanel.h>
+#include <vgui_entitypanel.h>
 #include <KeyValues.h>
-#include "commanderoverlay.h"
+#include "CommanderOverlay.h"
 #include "clientmode_tfnormal.h"
 #include "tf_shareddefs.h"
 #include "shareddefs.h"
 #include "c_func_resource.h"
 #include "techtree.h"
 #include "c_basetfplayer.h"
-#include "vgui_HealthBar.h"
-#include "vgui_BitmapImage.h"
+#include "vgui_healthbar.h"
+#include "vgui_bitmapimage.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"

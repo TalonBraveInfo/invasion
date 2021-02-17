@@ -6,13 +6,13 @@
 #include "playeroverlay.h"
 #include "iclientmode.h"
 #include "hud_technologytreedoc.h"
-#include "C_World.h"
+#include "c_world.h"
 #include "c_basetfplayer.h"
 #include "c_team.h"
 #include "c_tfteam.h"
 #include "c_func_resource.h"
-#include "vgui_BitmapImage.h"
-#include "C_Shield.h"
+#include "vgui_bitmapimage.h"
+#include "c_shield.h"
 #include "c_obj_respawn_station.h"
 
 bool IsEntityVisibleToTactical( int iLocalTeamNumber, int iLocalTeamPlayers, 

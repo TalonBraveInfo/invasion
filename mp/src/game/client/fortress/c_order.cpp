@@ -10,7 +10,7 @@
 #include <vgui_controls/Controls.h>
 #include <vgui/ISurface.h>
 #include "minimap_trace.h"
-#include "vguimatsurface/IMatSystemSurface.h"
+#include "VGuiMatSurface/IMatSystemSurface.h"
 #include "c_func_resource.h"
 #include "tf_shareddefs.h"
 #include "c_baseobject.h"

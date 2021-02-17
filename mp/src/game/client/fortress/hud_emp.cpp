@@ -12,12 +12,12 @@
 #include "tf_shareddefs.h"
 #include "iclientmode.h"
 #include "clientmode_tfnormal.h"
-#include "materialsystem/IMaterial.h"
-#include "materialsystem/IMesh.h"
+#include "materialsystem/imaterial.h"
+#include "materialsystem/imesh.h"
 #include "materialsystem/imaterialvar.h"
 #include <vgui_controls/Controls.h>
 #include <vgui/ISurface.h>
-#include "ClientEffectPrecacheSystem.h"
+#include "clienteffectprecachesystem.h"
 
 // EMP level positions
 #define HUDEMP_LEFT					((ScreenWidth() / 2)- XRES(40))

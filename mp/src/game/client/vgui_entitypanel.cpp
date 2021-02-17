@@ -6,9 +6,9 @@
 // $NoKeywords: $
 //=============================================================================//
 #include "cbase.h"
-#include "vgui_EntityPanel.h"
+#include "vgui_entitypanel.h"
 #include "ienginevgui.h"
-#include "c_BaseTFPlayer.h"
+#include "c_basetfplayer.h"
 #include "clientmode_tfnormal.h"
 #include "hud_commander_statuspanel.h"
 #include <KeyValues.h>

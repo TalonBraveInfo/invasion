@@ -11,7 +11,7 @@
 #pragma once
 #endif
 
-#include "AI_BaseNPC.h"
+#include "ai_basenpc.h"
 
 #define	BUG_BUILDER_MODEL		"models/npcs/bugs/bug_builder.mdl"
 

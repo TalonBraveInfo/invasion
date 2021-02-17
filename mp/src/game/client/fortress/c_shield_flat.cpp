@@ -12,7 +12,7 @@
 // $NoKeywords: $
 //=============================================================================
 #include "cbase.h"
-#include "C_Shield.h"
+#include "c_shield.h"
 #include "tf_shieldshared.h"
 #include "c_basetfplayer.h"
 

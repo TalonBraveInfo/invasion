@@ -1,6 +1,6 @@
 #include "cbase.h"
 #include "CommanderOverlay.h"
-#include "UtlSymbol.h"
+#include "utlsymbol.h"
 
 //-----------------------------------------------------------------------------
 // Purpose: Singleton class responsible for managing overlay elements 

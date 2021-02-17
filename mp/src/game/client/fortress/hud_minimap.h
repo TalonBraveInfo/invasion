@@ -22,7 +22,7 @@
 #include "hudelement.h"
 #include "utllinkedlist.h"
 #include "CommanderOverlay.h"
-#include "MapData.h"
+#include "mapdata.h"
 
 class BitmapImage;
 class CTextHelpPanel;

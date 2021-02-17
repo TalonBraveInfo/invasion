@@ -5,8 +5,8 @@
 #include "c_basecombatcharacter.h"
 #include "tf_shareddefs.h"
 #include "particles_simple.h"
-#include "FunctionProxy.h"
-#include "ieffects.h"
+#include "functionproxy.h"
+#include "IEffects.h"
 #include "weapon_combatshield.h"
 
 void C_BaseCombatCharacter::Release( void )

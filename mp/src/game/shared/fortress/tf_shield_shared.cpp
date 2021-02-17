@@ -15,7 +15,7 @@
 
 #include "tf_shieldshared.h"
 #include "edict.h"
-#include "mathlib/VMatrix.h"
+#include "mathlib/vmatrix.h"
 #include "engine/IEngineTrace.h"
 
 #ifdef CLIENT_DLL
@@ -246,7 +246,7 @@ void CShieldEffect::ComputeVertexActivity()
 //-----------------------------------------------------------------------------
 // bounding box for collision
 //-----------------------------------------------------------------------------
-void CShieldEffect::SetShieldPanelSize( Vector& mins, Vector& maxs )
+void CShieldEffect::SetShieldPanelSize( const Vector& mins, const Vector& maxs )
 {
 	m_PanelBoxMin = mins;
 	m_PanelBoxMax = maxs;
