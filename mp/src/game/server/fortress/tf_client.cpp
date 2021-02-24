@@ -75,8 +75,8 @@ void ClientGamePrecache( void )
 	CBaseEntity::PrecacheModel("models/player/human_escort.mdl");
 	CBaseEntity::PrecacheModel("models/player/alien_defender.mdl");
 	CBaseEntity::PrecacheModel("models/player/human_defender.mdl");
-	CBaseEntity::PrecacheModel("models/player/alien_technician.mdl");
-	CBaseEntity::PrecacheModel("models/player/human_technician.mdl");
+	//CBaseEntity::PrecacheModel("models/player/alien_technician.mdl");
+	//CBaseEntity::PrecacheModel("models/player/human_technician.mdl");
 	CBaseEntity::PrecacheModel("models/player/alien_infiltrator.mdl");
 	CBaseEntity::PrecacheModel("models/player/human_infiltrator.mdl");
 	CBaseEntity::PrecacheModel("models/player/alien_sapper.mdl");
