@@ -47,14 +47,19 @@ void C_ObjectBarbedWire::OnDataChanged( DataUpdateType_t type )
 		{
 			if ( !m_hRope )
 			{
-
+				const char *material;
+				if( GetTeamNumber() == TEAM_HUMANS ) {
+					material = "sprites/barbed_wire";
+				} else {
+					material = "sprites/physbeam";
+				}
 				m_hRope = C_RopeKeyframe::Create(
 					this,
 					m_hConnectedTo,
 					iAttachment,
 					iAttachment,
-					3,
-					"sprites/physbeam"
+					8,
+					material
 					);
 			}
 		}
@@ -70,13 +75,9 @@ void C_ObjectBarbedWire::OnDataChanged( DataUpdateType_t type )
 		// Update rope parameters.
 		if ( m_hRope )
 		{
-			int r, g, b, a;
-			CMapTeamColors *team = &MapData().m_TeamColors[ GetTeamNumber() ];
-			team->m_clrTeam.GetColor( r, g, b, a );
-			m_hRope->SetColorMod( Vector( r / 255.0f, g / 255.0f, b / 255.0f ) );
-
 			m_hRope->SetEndEntity( m_hConnectedTo );
-			m_hRope->SetRopeFlags( ROPE_SIMULATE | ROPE_BARBED );
+			// Originally used the BARBED flag here, but that just looks like a fucking mess.
+			m_hRope->SetRopeFlags( ROPE_SIMULATE );
 		}
 	}
 
