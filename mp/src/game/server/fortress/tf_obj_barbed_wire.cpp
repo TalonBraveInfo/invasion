@@ -14,7 +14,9 @@
 
 #define BARBED_WIRE_MINS	Vector(-5, -5, 0)
 #define BARBED_WIRE_MAXS	Vector( 5,  5, 40)
-#define BARBED_WIRE_MODEL	"models/objects/obj_barbed_wire.mdl"
+
+#define BARBED_WIRE_HUMAN_MODEL	"models/objects/human_obj_barbed_wire.mdl"
+#define BARBED_WIRE_ALIEN_MODEL "models/objects/alien_obj_barbed_wire.mdl"
 
 #define MAX_BARBED_WIRE_DISTANCE	768
 #define BARBED_WIRE_THINK_CONTEXT	"BarbedWireThinkContext"
@@ -46,7 +48,9 @@ CObjectBarbedWire::CObjectBarbedWire()
 //-----------------------------------------------------------------------------
 void CObjectBarbedWire::Precache()
 {
-	PrecacheModel( BARBED_WIRE_MODEL );
+	PrecacheModel( BARBED_WIRE_HUMAN_MODEL );
+	PrecacheModel( BARBED_WIRE_ALIEN_MODEL );
+
 	BaseClass::Precache();
 }
 
@@ -57,7 +61,8 @@ void CObjectBarbedWire::Spawn()
 {
 	Precache();
 
-	SetModel( BARBED_WIRE_MODEL );
+	SetModel( BARBED_WIRE_HUMAN_MODEL );
+
 	SetSolid( SOLID_BBOX );
 	SetType( OBJ_BARBED_WIRE );
 	UTIL_SetSize(this, BARBED_WIRE_MINS, BARBED_WIRE_MAXS );
@@ -237,3 +242,6 @@ void CObjectBarbedWire::FinishedBuilding()
 	BaseClass::FinishedBuilding();
 }
 
+void CObjectBarbedWire::SetupTeamModel() {
+	SetModel( ( GetTeamNumber() == TEAM_HUMANS ) ? BARBED_WIRE_HUMAN_MODEL : BARBED_WIRE_ALIEN_MODEL );
+}

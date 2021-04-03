@@ -34,6 +34,8 @@ public:
 	virtual bool PreStartBuilding();
 	virtual void FinishedBuilding();
 
+	void SetupTeamModel() override;
+
 private:
 	CNetworkHandle( CObjectBarbedWire, m_hConnectedTo );
 		
