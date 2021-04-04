@@ -203,7 +203,7 @@ struct ImpactEffect_t
 	const char *m_pNameNoFlecks;
 };
 
-static ImpactEffect_t s_pImpactEffect[26] = 
+static ImpactEffect_t s_pImpactEffect[ 26 ] =
 {
 	{ "impact_antlion",		NULL },							// CHAR_TEX_ANTLION
 	{ NULL,					NULL },							// CHAR_TEX_BLOODYFLESH	
@@ -211,7 +211,7 @@ static ImpactEffect_t s_pImpactEffect[26] =
 	{ "impact_dirt",		NULL },							// CHAR_TEX_DIRT			
 	{ NULL,					NULL },							// CHAR_TEX_EGGSHELL		
 	{ NULL,					NULL },							// CHAR_TEX_FLESH			
-	{ NULL,					NULL },							// CHAR_TEX_GRATE			
+	{ "impact_metal",					NULL },							// CHAR_TEX_GRATE			
 	{ NULL,					NULL },							// CHAR_TEX_ALIENFLESH		
 	{ NULL,					NULL },							// CHAR_TEX_CLIP			
 	{ NULL,					NULL },							// CHAR_TEX_UNUSED		
@@ -240,7 +240,7 @@ static void SetImpactControlPoint( CNewParticleEffect *pEffect, int nPoint, cons
 	vecImpactY *= -1.0f;
 
 	pEffect->SetControlPoint( nPoint, vecImpactPoint );
-	pEffect->SetControlPointOrientation( nPoint, vecForward, vecImpactY, vecImpactZ );
+	pEffect->SetControlPointOrientation( nPoint, vecImpactZ, vecImpactY, vecForward );
 	pEffect->SetControlPointEntity( nPoint, pEntity );
 }
 
@@ -266,9 +266,6 @@ static void PerformNewCustomEffects( const Vector &vecOrigin, trace_t &tr, const
 	if ( !pEffect->IsValid() )
 		return;
 
-	Vector vecImpactPoint = (tr.fraction != 1.0f) ? tr.endpos : vecOrigin;
-
-#if 0
 	Vector	vecReflect;
 	float	flDot = DotProduct(shotDir, tr.plane.normal);
 	VectorMA(shotDir, -2.0f * flDot, tr.plane.normal, vecReflect);
@@ -276,25 +273,11 @@ static void PerformNewCustomEffects( const Vector &vecOrigin, trace_t &tr, const
 	Vector vecShotBackward;
 	VectorMultiply(shotDir, -1.0f, vecShotBackward);
 
+	Vector vecImpactPoint = ( tr.fraction != 1.0f ) ? tr.endpos : vecOrigin;
+
 	SetImpactControlPoint( pEffect.GetObject(), 0, vecImpactPoint, tr.plane.normal, tr.m_pEnt ); 
 	SetImpactControlPoint( pEffect.GetObject(), 1, vecImpactPoint, vecReflect,		tr.m_pEnt ); 
-	SetImpactControlPoint( pEffect.GetObject(), 2, vecImpactPoint, vecShotBackward,	tr.m_pEnt ); 
-#else
-	pEffect->SetControlPoint(0, vecOrigin);
-	pEffect->SetControlPoint(1, vecOrigin);
-
-	Vector	reflect;
-	float	dot = shotDir.Dot(tr.plane.normal);
-	reflect = shotDir + (tr.plane.normal * (dot*-2.0f));
-
-	QAngle vecShotBackward;
-	VectorAngles(reflect, vecShotBackward);
-
-	Vector vecForward, vecRight, vecUp;
-	AngleVectors(vecShotBackward, &vecForward, &vecRight, &vecUp);
-
-	pEffect->SetControlPointOrientation(0, vecForward, vecRight, vecUp);
-#endif
+	SetImpactControlPoint( pEffect.GetObject(), 2, vecImpactPoint, vecShotBackward,	tr.m_pEnt );
 
 	pEffect->SetControlPoint( 3, Vector( iScale, iScale, iScale ) );
 	if ( pEffect->m_pDef->ReadsControlPoint( 4 ) )
