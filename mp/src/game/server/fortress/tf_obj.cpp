@@ -44,6 +44,7 @@ Copyright (C) 2014-2016 TalonBrave.info
 #include "npcevent.h"
 #include "tf_shareddefs.h"
 #include "animation.h"
+#include "te_effect_dispatch.h"
 
 // Control panels
 #define SCREEN_OVERLAY_MATERIAL "vgui/screens/vgui_overlay"
@@ -256,6 +257,8 @@ void CBaseObject::Precache()
 
 	if ( m_iszUnderAttackSound != NULL_STRING )
 		PrecacheSound( STRING(m_iszUnderAttackSound) );
+
+	PrecacheScriptSound( "Object.StartBuilding" );
 
 	PrecacheMaterial( SCREEN_OVERLAY_MATERIAL );
 
@@ -1372,6 +1375,8 @@ bool CBaseObject::StartBuilding( CBaseEntity *pBuilder )
 	DetermineAnimation();
 	// hogsy end
 
+	EmitSound( "Object.StartBuilding" );
+
 	return true;
 }
 
@@ -1380,6 +1385,28 @@ bool CBaseObject::StartBuilding( CBaseEntity *pBuilder )
 //-----------------------------------------------------------------------------
 void CBaseObject::BuildingThink( void )
 {
+	// Why are we dispatching here? Because apparently doing it at the 
+	// moment the object is placed doesn't reach the client! *sigh*
+	if( !hasStartedBuilding ) {
+		CEffectData data;
+		data.m_vOrigin = GetAbsOrigin();
+		data.m_vAngles = GetAbsAngles();
+		data.m_fFlags = 0;
+		data.m_nEntIndex = entindex();
+
+		AngleVectors( GetAbsAngles(), NULL, NULL, &data.m_vNormal );
+
+		const char *effectName;
+		if( IsBuiltOnAttachment() ) {
+			effectName = "BuildImpactSmall";
+		} else {
+			effectName = ( GetTeamNumber() == TEAM_HUMANS ) ? "BuildImpactGround" : "BuildTesla";
+		}
+
+		DispatchEffect( effectName, data );
+		hasStartedBuilding = true;
+	}
+
 	// Continue construction
 	Repair( (GetMaxHealth() - OBJECT_CONSTRUCTION_STARTINGHEALTH) / m_flTotalConstructionTime * OBJECT_CONSTRUCTION_INTERVAL );
 }

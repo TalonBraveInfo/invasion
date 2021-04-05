@@ -332,7 +332,6 @@ public:
 protected:
 	// Clean off the object of offensive material, returns true if it found anything
 	bool RemoveEnemyAttachments( CBaseEntity *pActivator );
-	void RemoveAnalyzer( CBaseEntity *pRemovingEntity );
 	void RemoveAllSappers();
 
 	void GiveNamedTechnology( CBaseTFPlayer *pRecipient, const char *techname );
@@ -388,6 +387,7 @@ protected:
 	bool	m_bCantDie;
 	float	m_flRepairMultiplier;
 	bool	m_bDying;
+	bool hasStartedBuilding{ false };
 
 	// Outputs
 	COutputEvent m_OnDestroyed;
