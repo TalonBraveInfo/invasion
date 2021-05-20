@@ -755,6 +755,12 @@ int CPlayerClass::CanBuild( int iObjectType )
 	}
 	else
 	{
+		// Introducing this restriction here for cases where objects are cheap enough that players could possibly build too 
+		// many, i.e. the barbed wire
+		int maxObjects = GetObjectInfo( iObjectType )->m_nMaxObjects;
+		if( ( maxObjects > 0 ) && iObjectCount >= maxObjects )
+			return CB_LIMIT_REACHED;
+
 		// Find out how much the next object should cost
 		int iCost = CalculateObjectCost( iObjectType, GetNumObjects( iObjectType ), m_pPlayer->GetTeamNumber() );
 

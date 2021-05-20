@@ -172,7 +172,11 @@ void CHumanPDAPanel::OnTick()
 	Q_snprintf( buf, 256, "Cost:  %i", iCost );
 	m_pObjectCost->SetText( buf );
 
-	Q_snprintf( buf, 256, "You own:  %i", numOwned );
+	if( info->m_nMaxObjects > 0 ) {
+		Q_snprintf( buf, 256, "You own:  %i/%i", numOwned, info->m_nMaxObjects );
+	} else {
+		Q_snprintf( buf, 256, "You own:  %i", numOwned );
+	}
 	m_pObjectOnTeamCount->SetText( buf );
 
 	Q_snprintf( buf, 256, "%s", info->m_pBuilderPlacementString ? info->m_pBuilderPlacementString : "" );

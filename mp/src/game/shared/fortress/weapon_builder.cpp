@@ -403,15 +403,13 @@ void CWeaponBuilder::SetCurrentObject( int iObject )
 	}
 
 	// Recalculate the buildability of each object (for propagation to the client)
-	for ( i=0; i < m_bObjectBuildability.Count(); i++ )
-		m_bObjectBuildability.Set( i, 0 );
-
-	for ( i = 0; i < OBJ_LAST; i++ )
-	{
-		if ( m_bObjectValidity[i] && pOwner->CanBuild(i) == CB_CAN_BUILD )
-		{
+	for( i = 0; i < OBJ_LAST; i++ ) {
+		if( m_bObjectValidity[ i ] && pOwner->CanBuild( i ) == CB_CAN_BUILD ) {
 			m_bObjectBuildability.Set( i, true );
+			continue;
 		}
+
+		m_bObjectBuildability.Set( i, false );
 	}
 
 	m_iCurrentObject = iObject;
