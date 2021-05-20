@@ -202,9 +202,7 @@ void CWeaponFlameThrower::ItemPostFrame()
 
 void CWeaponFlameThrower::PrimaryAttack()
 {
-	#if defined( CLIENT_DLL )
-	
-	#else
+	#if !defined( CLIENT_DLL )
 		CBasePlayer *pOwner = ToBaseTFPlayer( GetOwner() );
 		if ( !pOwner )
 			return;

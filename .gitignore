@@ -74,22 +74,6 @@ config.cfg
 *.vpc_crc
 *.sentinel
 
-/mp/game/invasion/scripts/hintdisplaystats.txt
-/mp/game/invasion/class_stats_detailed.txt
-/mp/game/invasion/class_stats.txt
-/mp/game/invasion/stats.txt
-/mp/game/invasion/normal.tga
-/mp/game/invasion/albedo.tga
-/mp/game/invasion/cfg/pet.txt
-/mp/game/invasion/cfg/vmt.txt
-/mp/game/invasion/cfg/server_blacklist.txt
-/mp/game/invasion/cfg/settings.scr
-/mp/game/invasion/cubemap_screenshots
-/mp/game/invasion/screenshots
-/mp/game/invasion/user_custom
-/mp/game/invasion/ServerConfig.vdf
-/mp/game/invasion/custom/ServerConfig.vdf
-
 # These can be compiled - ignore
 /mp/src/lib/public/mathlib.lib
 /mp/src/lib/public/raytrace.lib
@@ -101,8 +85,10 @@ mp/src/game/server/Release_invasion/
 mp/src/game/client/Release_invasion/
 mp/src/game/server/Debug_invasion/
 mp/src/game/client/Debug_invasion/
-
-#mp/game_src/maps/hogsy/*.bsp
+/mp/src/vgui2/vgui_controls/Debug
+/mp/src/tier1/Debug
+/mp/src/raytrace/Debug
+/mp/src/mathlib/Debug
 
 *.dem
 *.old
