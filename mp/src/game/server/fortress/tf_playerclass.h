@@ -144,27 +144,6 @@ public:
 	// Respawn ( allow classes to override spawn points )
 	virtual CBaseEntity		*SelectSpawnPoint( void );
 
-	void *operator new( size_t stAllocateBlock )	
-	{												
-		Assert( stAllocateBlock != 0 );				
-		void *pMem = malloc( stAllocateBlock );
-		memset( pMem, 0, stAllocateBlock );
-		return pMem;												
-	}
-	
-	void* operator new( size_t stAllocateBlock, int nBlockUse, const char *pFileName, int nLine )  
-	{ 
-		Assert( stAllocateBlock != 0 );				
-		void *pMem = _malloc_dbg( stAllocateBlock, nBlockUse, pFileName, nLine );
-		memset( pMem, 0, stAllocateBlock );
-		return pMem;												
-	}
-
-	void operator delete( void *pMem )
-	{
-		free( pMem );
-	}
-
 	void SetClassModel( string_t sModelName, int nTeam )	{ m_sClassModel[nTeam] = sModelName; }
 
 	// Weapon & Tech Associations

@@ -16,6 +16,9 @@ struct studiohdr_t;
 #include <stdio.h>
 #include <stdlib.h>
 
+// STD Headers
+#include <string>
+
 #include <tier0/platform.h>
 #include <tier0/dbg.h>
 
