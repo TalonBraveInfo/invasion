@@ -26,6 +26,8 @@ While we aim for authenticity, we do have to take some creative liberties given 
 - Marco "_eukos_" Hladik (Some additional models)
 - ScarT (Human/Alien Commando model sources)
 - Valve (Original concept and code)
+- [SCell555 for their updated _ShaderCompile.exe_](https://github.com/SCell555/ShaderCompile)
+- [thexa4 for their PBR implementation](https://github.com/thexa4/source-pbr)
 
 ## Contributing
 

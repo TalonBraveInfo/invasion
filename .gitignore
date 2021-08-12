@@ -101,3 +101,15 @@ devtools/gcc9+support.o
 
 /mp/src/game/client/fortress/fortress.txt
 /mp/src/enc_temp_folder
+/.vs
+/mp/src/.idea
+/mp/src/materialsystem/stdshaders/.vs
+/mp/src/materialsystem/stdshaders/Debug_dx9_invasion
+/mp/src/materialsystem/stdshaders/fxctmp9_tmp
+/mp/src/materialsystem/stdshaders/fxctmp9
+/mp/src/materialsystem/stdshaders/include
+/mp/src/materialsystem/stdshaders/shaders/fxc
+/mp/src/materialsystem/stdshaders/filelistgen.txt
+/mp/src/materialsystem/stdshaders/filelist.txt
+/mp/src/cmake-build-debug
+/mp/src/out/build/x64-Debug
