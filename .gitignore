@@ -103,13 +103,20 @@ devtools/gcc9+support.o
 /mp/src/enc_temp_folder
 /.vs
 /mp/src/.idea
+
+# Shader crap
 /mp/src/materialsystem/stdshaders/.vs
-/mp/src/materialsystem/stdshaders/Debug_dx9_invasion
+/mp/src/materialsystem/stdshaders/Debug_**
 /mp/src/materialsystem/stdshaders/fxctmp9_tmp
 /mp/src/materialsystem/stdshaders/fxctmp9
 /mp/src/materialsystem/stdshaders/include
 /mp/src/materialsystem/stdshaders/shaders/fxc
 /mp/src/materialsystem/stdshaders/filelistgen.txt
 /mp/src/materialsystem/stdshaders/filelist.txt
+mp/src/materialsystem/stdshaders/filestocopy.txt
+mp/src/materialsystem/stdshaders/inclist.txt
+mp/src/materialsystem/stdshaders/makefile.**
+mp/src/materialsystem/stdshaders/vcslist.txt
+
 /mp/src/cmake-build-debug
 /mp/src/out/build/x64-Debug
