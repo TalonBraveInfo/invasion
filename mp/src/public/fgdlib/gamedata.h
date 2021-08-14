@@ -15,8 +15,8 @@
 #include <fstream>
 #pragma warning(pop)
 #include "TokenReader.h"
-#include "GDClass.h"
-#include "InputOutput.h"
+#include "gdclass.h"
+#include "inputoutput.h"
 #include "UtlString.h"
 #include "utlvector.h"
 
