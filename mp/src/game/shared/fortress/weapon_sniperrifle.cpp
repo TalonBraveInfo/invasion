@@ -48,7 +48,6 @@ public:
 
 	void AddViewKick( void ) override;
 	float GetFireRate( void ) override;
-	float GetDefaultAnimSpeed( void ) override;
 	void BulletWasFired( const Vector &vecStart, const Vector &vecEnd ) override;
 
 	// All predicted weapons need to implement and return true
@@ -128,8 +127,20 @@ bool CWeaponSniperRifle::Holster( CBaseCombatWeapon *pSwitchingTo ) {
 // Purpose: Get the accuracy derived from weapon and player, and return it
 //-----------------------------------------------------------------------------
 const Vector &CWeaponSniperRifle::GetBulletSpread( void ) {
-	static Vector cone = VECTOR_CONE_PRECALCULATED;
-	return cone;
+	CBaseTFPlayer *player = ToBaseTFPlayer( GetOwner() );
+	if ( player == nullptr )
+	{
+		return VECTOR_CONE_PRECALCULATED;
+	}
+
+	static Vector spread;
+	spread = VECTOR_CONE_1DEGREES;
+	if ( player->GetFlags() & FL_DUCKING )
+	{
+		spread *= 0.25;
+	}
+
+	return spread;
 }
 
 void CWeaponSniperRifle::ItemPostFrame( void ) {
@@ -255,29 +266,7 @@ void CWeaponSniperRifle::AddViewKick( void ) {
 // Purpose: 
 //-----------------------------------------------------------------------------
 float CWeaponSniperRifle::GetFireRate( void ) {
-	float flFireRate = weapon_sniperrifle_rate.GetFloat();
-
-	CBaseTFPlayer *pPlayer = static_cast<CBaseTFPlayer *>( GetOwner() );
-	if( pPlayer ) {
-		// Ducking players should fire more rapidly.
-		if( pPlayer->GetFlags() & FL_DUCKING ) {
-			flFireRate *= weapon_sniperrifle_ducking_mod.GetFloat();
-		}
-	}
-
-	return flFireRate;
-}
-
-//-----------------------------------------------------------------------------
-// Purpose: Match the anim speed to the weapon speed while crouching
-//-----------------------------------------------------------------------------
-float CWeaponSniperRifle::GetDefaultAnimSpeed( void ) {
-	if( GetOwner() && GetOwner()->IsPlayer() ) {
-		if( GetOwner()->GetFlags() & FL_DUCKING )
-			return ( 1.0 + ( 1.0 - weapon_sniperrifle_ducking_mod.GetFloat() ) );
-	}
-
-	return 1.0;
+	return weapon_sniperrifle_rate.GetFloat();
 }
 
 //-----------------------------------------------------------------------------
