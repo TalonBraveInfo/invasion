@@ -1,3 +1,6 @@
+// Copyright © Valve Corporation
+// Copyright © 2014-2022, Mark E Sowden <hogsy@oldtimes-software.com>
+
 #include "cbase.h"
 #include "c_baseobject.h"
 #include "c_basetfplayer.h"
@@ -215,11 +218,26 @@ int C_BaseObject::DrawModel( int flags )
 	}
 	else
 	{
+		Vector orgColor;
+		render->GetColorModulation( orgColor.Base() );
+
+		if ( !( IsPlacing() || IsBuilding() ) && !IsPowered() )
+		{
+			float frac = cosf( fmodf( gpGlobals->curtime, 3 ) * 2 * M_PI );
+			Vector color( ( 175 + ( int ) ( frac * 75.0f ) ) / 255.0, 0, 0 );
+			render->SetColorModulation( color.Base() );
+		}
+
 		// If we're a brush-built, map-defined object chain up to baseentity draw
 		if ( modelinfo->GetModelType( GetModel() ) == mod_brush )
 			drawn = CBaseEntity::DrawModel(flags);
 		else
 			drawn = BaseClass::DrawModel(flags);
+
+		if ( !( IsPlacing() || IsBuilding() ) && !IsPowered() )
+		{
+			render->SetColorModulation( orgColor.Base() );
+		}
 	}
 
 #if 1
