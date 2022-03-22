@@ -53,9 +53,8 @@ protected:
 	virtual void	CategorizePosition( void ) override;
 
 	// Specific movement functions.
-	virtual void	WalkMove( void );
-	void			AirMove( void );
-	virtual int		TryPlayerMove( Vector *pFirstDest=NULL, trace_t *pFirstTrace=NULL );
+	virtual void	WalkMove( void ) override;
+	virtual int		TryPlayerMove( Vector *pFirstDest=NULL, trace_t *pFirstTrace=NULL ) override;
 	int				TryPlayerMove2( void );
 	void			ResolveStanding( void );
 	void			TryStanding( void );

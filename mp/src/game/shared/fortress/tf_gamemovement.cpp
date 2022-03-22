@@ -576,7 +576,6 @@ void CTFGameMovement::HandlePlayerMove( void )
 		case MOVETYPE_LADDER:
 			{
 				FullLadderMove(); // the below never equated to anything but false!!
-//				FullLadderMove( (ladder != INVALID_ENTITY_HANDLE) );
 				break;
 			}
 		case MOVETYPE_WALK:
@@ -631,12 +630,6 @@ void CTFGameMovement::PostPlayerMove( void )
 {
 }
 
-void CTFGameMovement::AirMove( void )
-{
-	// Reduced to this, as it was practically unchanged anyway. ~hogsy
-	BaseClass::AirMove();
-}
-
 //-----------------------------------------------------------------------------
 // Purpose: This is here until the new movement code is complete.  I needed
 //          to override hl2's walk move so that "floors" are identified 
@@ -646,6 +639,9 @@ void CTFGameMovement::WalkMove( void )
 {
 	VPROF( "CTFGameMovement::WalkMove" );
 
+#if 1
+	BaseClass::WalkMove();
+#else // Older implementation, might behave differently but likely doesn't matter
 	int clip;
 	int i;
 
@@ -808,6 +804,7 @@ usedown:
 	float stepDist = mv->GetAbsOrigin().z - original.z;
 	if ( stepDist > 0 )
 		mv->m_outStepHeight += stepDist;
+#endif
 }
 
 void CTFGameMovement::Accelerate( Vector &wishdir, float wishspeed, float accel )
