@@ -214,10 +214,9 @@ void CWeaponCombatShotgun::PrimaryAttack( void )
 	}
 
 	// Make a satisfying shotgun force, and knock them into the air
-	float flForceScale = (100) * 75;
 	Vector vecForce = vecAiming;
 	vecForce.z += 0.7;
-	vecForce *= flForceScale;
+	vecForce *= 1500.0f;
 	
 	CTakeDamageInfo info( this, pPlayer, vecForce, vec3_origin, flDamage, DMG_BULLET | DMG_BUCKSHOT);
 	TFGameRules()->FireBullets( info, weapon_combat_shotgun_pellets.GetFloat(), vecSrc, vecAiming, GetBulletSpread(), weapon_combat_shotgun_range.GetFloat(), m_iPrimaryAmmoType, 2, entindex(), 0 );
