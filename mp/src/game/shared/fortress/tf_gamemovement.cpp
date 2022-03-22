@@ -83,6 +83,10 @@ void CTFGameMovement::CategorizePosition( void )
 	// water on each call, and the converse case will correct itself if called twice.
 	CheckWater();
 
+	// observers don't have a ground entity
+	if ( player->IsObserver() )
+		return;
+
 	trace_t trace;
 	Vector vStart( mv->GetAbsOrigin().x, mv->GetAbsOrigin().y, mv->GetAbsOrigin().z + 2 );
 	Vector vEnd( mv->GetAbsOrigin().x, mv->GetAbsOrigin().y, mv->GetAbsOrigin().z - 66 );
@@ -391,10 +395,12 @@ void CTFGameMovement::HandleDuck( void )
 
 	if ( ( mv->m_nButtons & IN_DUCK ) || ( player->m_Local.m_bDucking ) || ( player->GetFlags() & FL_DUCKING ) )
 	{
+#if 0
 		// Remove all movement when ducking!
 		mv->m_flForwardMove = 0.0f;
 		mv->m_flSideMove = 0.0f;
 		mv->m_flUpMove = 0.0f;
+#endif
 
 		if ( mv->m_nButtons & IN_DUCK )
 		{
@@ -623,99 +629,6 @@ void CTFGameMovement::PlayerMove( void )
 
 void CTFGameMovement::PostPlayerMove( void )
 {
-}
-
-void CTFGameMovement::FullWalkMove()
-{
-	VPROF( "CTFGameMovement::FullWalkMove" );
-
-	if ( !CheckWater() ) 
-		StartGravity();
-
-	// If we are leaping out of the water, just update the counters.
-	if (player->m_flWaterJumpTime)
-	{
-		WaterJump();
-		TryPlayerMove();
-		// See if we are still in water?
-		CheckWater();
-		return;
-	}
-
-	// If we are swimming in the water, see if we are nudging against a place we can jump up out
-	//  of, and, if so, start out jump.  Otherwise, if we are not moving up, then reset jump timer to 0
-	if ( player->GetWaterLevel() >= WL_Waist ) 
-	{
-		if ( player->GetWaterLevel() == WL_Waist )
-			CheckWaterJump();
-
-			// If we are falling again, then we must not trying to jump out of water any more.
-		if ( mv->m_vecVelocity[2] < 0 && 
-			 player->m_flWaterJumpTime )
-			player->m_flWaterJumpTime = 0;
-
-		// Was jump button pressed?
-		if (mv->m_nButtons & IN_JUMP)
-			CheckJumpButton();
-		else
-			mv->m_nOldButtons &= ~IN_JUMP;
-
-		// Perform regular water movement
-		WaterMove();
-		VectorSubtract (mv->m_vecVelocity, player->GetBaseVelocity(), mv->m_vecVelocity);
-
-		// Redetermine position vars
-		CategorizePosition();
-	}
-	else
-	// Not fully underwater
-	{
-		// Was jump button pressed?
-		if (mv->m_nButtons & IN_JUMP)
-			CheckJumpButton();
-		else
-			mv->m_nOldButtons &= ~IN_JUMP;
-
-		// Fricion is handled before we add in any base velocity. That way, if we are on a conveyor, 
-		//  we don't slow when standing still, relative to the conveyor.
-		if (player->GetGroundEntity() != NULL)
-		{
-			mv->m_vecVelocity[2] = 0.0;
-			Friction();
-		}
-
-		// Make sure velocity is valid.
-		CheckVelocity();
-
-		if (player->GetGroundEntity() != NULL)
-			WalkMove();
-		else
- 			AirMove();  // Take into account movement when in air.
-
-		// Set final flags.
-		CategorizePosition();
-
-		// Now pull the base velocity back out.   Base velocity is set if you are on a moving object, like
-		//  a conveyor (or maybe another monster?)
-		VectorSubtract (mv->m_vecVelocity, player->GetBaseVelocity(), mv->m_vecVelocity );
-
-		// Make sure velocity is valid.
-		CheckVelocity();
-
-		// Add any remaining gravitational component.
-		if ( !CheckWater() )
-			FinishGravity();
-
-		// If we are on ground, no downward velocity.
-		if ( player->GetGroundEntity() != NULL )
-			mv->m_vecVelocity[2] = 0;
-
-		CheckFalling();
-	}
-
-	if  ( ( m_nOldWaterLevel == WL_NotInWater && player->GetWaterLevel() != WL_NotInWater ) ||
-		  ( m_nOldWaterLevel != WL_NotInWater && player->GetWaterLevel() == WL_NotInWater ) )
-		PlaySwimSound();
 }
 
 void CTFGameMovement::AirMove( void )

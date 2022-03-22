@@ -50,10 +50,9 @@ protected:
 	void			Accelerate( Vector& wishdir, float wishspeed, float accel);
 	float			CalcGravityAdjustment( const Vector &wishdir );
 	void			HandleLadder( void );
-	virtual void	CategorizePosition( void );
+	virtual void	CategorizePosition( void ) override;
 
 	// Specific movement functions.
-	virtual void	FullWalkMove( );
 	virtual void	WalkMove( void );
 	void			AirMove( void );
 	virtual int		TryPlayerMove( Vector *pFirstDest=NULL, trace_t *pFirstTrace=NULL );
