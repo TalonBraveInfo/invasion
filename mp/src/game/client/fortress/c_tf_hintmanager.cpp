@@ -51,7 +51,7 @@ C_TFHintManager::C_TFHintManager( void )
 	m_pkvHintSystem = new KeyValues( "HintSystem" );
 	if ( m_pkvHintSystem )
 	{
-		bool valid = m_pkvHintSystem->LoadFromFile( filesystem, "scripts//hintsystem.txt" );
+		bool valid = m_pkvHintSystem->LoadFromFile( filesystem, "scripts/hintsystem.vdf" );
 		if ( !valid )
 		{
 			m_pkvHintSystem->deleteThis();
