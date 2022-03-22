@@ -13,7 +13,6 @@
 ConVar weapon_sniperrifle_damage( "weapon_sniperrifle_damage", "50", FCVAR_REPLICATED, "Sniper damage per pellet" );
 ConVar weapon_sniperrifle_range( "weapon_sniperrifle_range", "10000", FCVAR_REPLICATED, "Sniper maximum range" );
 ConVar weapon_sniperrifle_rate( "weapon_sniperrifle_rate", "1.15", FCVAR_REPLICATED, "Sniper rate of fire" );
-ConVar weapon_sniperrifle_ducking_mod( "weapon_sniperrifle_ducking_mod", "0.75", FCVAR_REPLICATED, "Sniper ducking speed modifier" );
 
 #if defined( CLIENT_DLL )
 #include "hud.h"
@@ -39,7 +38,6 @@ public:
 
 	void Precache() override;
 
-	bool Holster( CBaseCombatWeapon *pSwitchingTo ) override;
 	const Vector &GetBulletSpread( void ) override;
 	void ItemPostFrame( void ) override;
 
@@ -117,30 +115,12 @@ void CWeaponSniperRifle::Precache() {
 	BaseClass::Precache();
 }
 
-bool CWeaponSniperRifle::Holster( CBaseCombatWeapon *pSwitchingTo ) {
-	//m_flRotationSpeed = 0;
-
-	return BaseClass::Holster( pSwitchingTo );
-}
-
 //-----------------------------------------------------------------------------
 // Purpose: Get the accuracy derived from weapon and player, and return it
 //-----------------------------------------------------------------------------
 const Vector &CWeaponSniperRifle::GetBulletSpread( void ) {
-	CBaseTFPlayer *player = ToBaseTFPlayer( GetOwner() );
-	if ( player == nullptr )
-	{
-		return VECTOR_CONE_PRECALCULATED;
-	}
-
-	static Vector spread;
-	spread = VECTOR_CONE_1DEGREES;
-	if ( player->GetFlags() & FL_DUCKING )
-	{
-		spread *= 0.25;
-	}
-
-	return spread;
+	static Vector v = VECTOR_CONE_1DEGREES;
+	return v;
 }
 
 void CWeaponSniperRifle::ItemPostFrame( void ) {

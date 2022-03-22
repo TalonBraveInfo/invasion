@@ -1498,6 +1498,13 @@ void CTeamFortress::FireBullets( const CTakeDamageInfo &info, int cShots, const 
 	ClearMultiDamage();
 #endif
 
+	Vector         vecSpreadMod = vecSpread;
+	CBaseTFPlayer *player = ToBaseTFPlayer( pWeapon->GetOwner() );
+	if ( player != nullptr && ( player->GetFlags() & FL_DUCKING ) )
+	{
+		vecSpreadMod *= 0.25;
+	}
+
 	int seed = 0;
 
 	for (int iShot = 0; iShot < cShots; iShot++)
@@ -1533,7 +1540,7 @@ void CTeamFortress::FireBullets( const CTakeDamageInfo &info, int cShots, const 
 			z = x*x+y*y;
 		} while (z > 1);
 
-		Vector vecDir = vecDirShooting + x * vecSpread.x * vecRight + y * vecSpread.y * vecUp;
+		Vector vecDir = vecDirShooting + x * vecSpreadMod.x * vecRight + y * vecSpreadMod.y * vecUp;
 		Vector vecEnd = vecSrc + vecDir * flDistance;
 
 		// Try the trace
