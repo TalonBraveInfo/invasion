@@ -118,10 +118,10 @@ CInfoAct::CInfoAct( void )
 //-----------------------------------------------------------------------------
 // Purpose: 
 //-----------------------------------------------------------------------------
-bool CInfoAct::ShouldTransmit( const edict_t *recipient, const void *pvs, int clientArea )
+int CInfoAct::ShouldTransmit( const CCheckTransmitInfo *pInfo )
 {
 	// Always transmit 
-	return true;
+	return FL_EDICT_ALWAYS;
 }
 
 void CInfoAct::Spawn( void )

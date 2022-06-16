@@ -127,7 +127,7 @@ public:
 	{
 	}
 	
-	virtual int ShouldTransmit( const CCheckTransmitInfo *pInfo, int nPrevShouldTransmitResult )
+	virtual int ShouldTransmit( const CCheckTransmitInfo *pInfo, int nPrevShouldTransmitResult ) override
 	{
 		// Don't transmit the rope if it's not even visible.
 		if ( !nPrevShouldTransmitResult )

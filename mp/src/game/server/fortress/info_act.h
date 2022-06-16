@@ -25,7 +25,7 @@ public:
 	DECLARE_DATADESC();
 	DECLARE_SERVERCLASS();
 
-	bool ShouldTransmit( const edict_t *recipient, const void *pvs, int clientArea );
+	int ShouldTransmit( const CCheckTransmitInfo *pInfo ) override;
 
 	void Spawn( void );
 	void StartAct( void );

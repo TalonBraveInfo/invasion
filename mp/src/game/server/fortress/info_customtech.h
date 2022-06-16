@@ -24,7 +24,7 @@ public:
 	void	Spawn( void );
 	void	Activate( void );
 	void	UpdateTechPercentage( float flPercentage );
-	virtual bool ShouldTransmit( const edict_t *recipient, const void *pvs, int clientArea );
+	virtual int ShouldTransmit( const CCheckTransmitInfo *pInfo ) override;
 
 	DECLARE_SERVERCLASS();
 	DECLARE_DATADESC();

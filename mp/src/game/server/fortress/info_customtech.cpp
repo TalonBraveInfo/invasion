@@ -31,21 +31,21 @@ LINK_ENTITY_TO_CLASS( info_customtech, CInfoCustomTechnology );
 //-----------------------------------------------------------------------------
 // Purpose: Always transmit
 //-----------------------------------------------------------------------------
-bool CInfoCustomTechnology::ShouldTransmit( const edict_t *recipient, const void *pvs, int clientArea )
+int CInfoCustomTechnology::ShouldTransmit( const CCheckTransmitInfo *pInfo )
 {
 	// Don't need to transmit ones that don't add new techs
 	if ( !m_iszTechTreeFile )
-		return false;
+		return FL_EDICT_DONTSEND;
 
 	// Only transmit to members of my team
-	CBaseEntity* pRecipientEntity = CBaseEntity::Instance( recipient );
+	CBaseEntity* pRecipientEntity = CBaseEntity::Instance( pInfo->m_pClientEnt );
 	if ( InSameTeam( pRecipientEntity ) )
 	{
 		//Msg( "SENDING\n" );
-		return true;
+		return FL_EDICT_ALWAYS;
 	}
 
-	return false;
+	return FL_EDICT_DONTSEND;
 }
 
 //-----------------------------------------------------------------------------

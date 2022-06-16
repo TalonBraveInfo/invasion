@@ -28,7 +28,7 @@ public:
 	void EndTouch( CBaseEntity * );
 	void Think( void );
 
-	virtual bool ShouldTransmit( const edict_t *recipient, const void *pvs, int clientArea );
+	virtual int ShouldTransmit( const CCheckTransmitInfo *pInfo ) override;
 
 	// input functions
 	void InputLockControllingTeam( inputdata_t &inputdata );

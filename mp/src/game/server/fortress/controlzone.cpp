@@ -21,12 +21,12 @@
 //			clientArea - 
 // Output : Returns true on success, false on failure.
 //-----------------------------------------------------------------------------
-bool CControlZone::ShouldTransmit( const edict_t *recipient, const void *pvs, int clientArea )
+int CControlZone::ShouldTransmit( const CCheckTransmitInfo *pInfo )
 {
 	if ( GetEffects() & EF_NODRAW )
-		return false;
+		return FL_EDICT_DONTSEND;
 
-	return true;
+	return FL_EDICT_ALWAYS;
 }
 
 IMPLEMENT_SERVERCLASS_ST(CControlZone, DT_ControlZone)

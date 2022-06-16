@@ -42,7 +42,7 @@ public:
 	bool	PreventsBuildOf( int iObjectType );
 
 	// need to transmit to players who are in commander mode
-	bool	ShouldTransmit( const edict_t *recipient, const void *pvs, int clientArea );
+	int ShouldTransmit( const CCheckTransmitInfo *pInfo ) override;
 
 private:
 	bool	m_bActive;
@@ -172,20 +172,20 @@ bool CFuncNoBuild::PreventsBuildOf( int iObjectType )
 //-----------------------------------------------------------------------------
 // Purpose: Transmit this to all players who are in commander mode
 //-----------------------------------------------------------------------------
-bool CFuncNoBuild::ShouldTransmit( const edict_t *recipient, const void *pvs, int clientArea )
+int CFuncNoBuild::ShouldTransmit( const CCheckTransmitInfo *pInfo )
 {
 	// Team rules may tell us that we should
-	CBaseEntity* pRecipientEntity = CBaseEntity::Instance( recipient );
+	CBaseEntity* pRecipientEntity = CBaseEntity::Instance( pInfo->m_pClientEnt );
 	if ( pRecipientEntity->IsPlayer() )
 	{
 		CBasePlayer *pPlayer = (CBasePlayer*)pRecipientEntity;
 		if ( pPlayer->GetTeam() )
 		{
 			if (pPlayer->GetTeam()->ShouldTransmitToPlayer( pPlayer, this ))
-				return true;
+				return FL_EDICT_ALWAYS;
 		}
 	}
-	return false;
+	return FL_EDICT_DONTSEND;
 }
 
 //-----------------------------------------------------------------------------

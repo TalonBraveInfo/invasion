@@ -95,6 +95,7 @@ mp/src/game/client/Debug_invasion/
 *.rehex-meta
 *.ztmp
 *.pdb
+*.txt
 
 # Build support files
 devtools/gcc9+support.o

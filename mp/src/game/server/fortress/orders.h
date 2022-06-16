@@ -31,7 +31,7 @@ public:
 					COrder();
 	virtual	void	UpdateOnRemove( void );
 
-	virtual bool	ShouldTransmit( const edict_t *recipient, const void *pvs, int clientArea );
+	virtual int	ShouldTransmit( const CCheckTransmitInfo *pInfo ) override;
 	
 	// This is called when removing the order.
 	void			DetachFromPlayer();

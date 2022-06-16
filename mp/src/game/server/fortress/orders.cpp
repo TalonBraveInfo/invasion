@@ -40,23 +40,24 @@ void COrder::UpdateOnRemove( void )
 //-----------------------------------------------------------------------------
 // Purpose: Transmit weapon data
 //-----------------------------------------------------------------------------
-bool COrder::ShouldTransmit( const edict_t *recipient, const void *pvs, int clientArea )
+int COrder::ShouldTransmit( const CCheckTransmitInfo *pInfo )
 {
-	CBaseEntity* pRecipientEntity = CBaseEntity::Instance( recipient );
+	CBaseEntity *pRecipientEntity = CBaseEntity::Instance( pInfo->m_pClientEnt );
 
 	// If this is a personal order, only send to it's owner
 	if ( GetOwner() )
 	{
 		if ( GetOwner() == pRecipientEntity )
-			return true;
-		return false;
+			return FL_EDICT_ALWAYS;
+
+		return FL_EDICT_DONTSEND;
 	}
 
 	// Otherwise, only send to players on our team
 	if ( InSameTeam( pRecipientEntity ) )
-		return true;
+		return FL_EDICT_ALWAYS;
 
-	return false;
+	return FL_EDICT_DONTSEND;
 }
 
 
