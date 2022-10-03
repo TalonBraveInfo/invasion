@@ -187,6 +187,23 @@ const char *CWeaponObjectSelection::GetPrintName( void ) const
 	return GetObjectInfo( m_iObjectType )->m_pStatusName;
 }
 
+bool CWeaponObjectSelection::CanBeSelected()
+{
+	CBaseTFPlayer *player = ToBaseTFPlayer( GetOwner() );
+	if ( player == nullptr )
+		return false;
+
+	int cost = CalculateObjectCost( m_iObjectType, player->GetNumObjects( m_iObjectType ), player->GetTeamNumber() );
+	if ( player->GetBankResources() < cost )
+		return false;
+
+	const CObjectInfo *info = GetObjectInfo( m_iObjectType );
+	if ( player->GetNumObjects( m_iObjectType ) >= info->m_nMaxObjects )
+		return false;
+
+	return true;
+}
+
 #if defined( CLIENT_DLL )
 //-----------------------------------------------------------------------------
 // Purpose: 

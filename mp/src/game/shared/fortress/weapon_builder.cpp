@@ -25,7 +25,6 @@ Copyright (C) 2014-2017 TalonBrave.info
 #include "clientmode_tfnormal.h"
 #endif
 
-extern ConVar tf2_object_hard_limits;
 extern ConVar tf_fastbuild;
 
 //EXTERN_SEND_TABLE(DT_BaseCombatWeapon)
@@ -313,7 +312,7 @@ void CWeaponBuilder::PrimaryAttack( void )
 					StartBuilding();
 
 					// Should we switch away?
-					if ( iFlags & OF_ALLOW_REPEAT_PLACEMENT )
+					if ( ( pOwner->CanBuild( m_iCurrentObject ) == CB_CAN_BUILD ) && ( iFlags & OF_ALLOW_REPEAT_PLACEMENT ) )
 					{
 						// Start placing another
 						SetCurrentState( BS_PLACING );
@@ -404,16 +403,11 @@ void CWeaponBuilder::SetCurrentObject( int iObject )
 
 	// Recalculate the buildability of each object (for propagation to the client)
 	for( i = 0; i < OBJ_LAST; i++ ) {
-		if( m_bObjectValidity[ i ] && pOwner->CanBuild( i ) == CB_CAN_BUILD ) {
-			m_bObjectBuildability.Set( i, true );
-			continue;
-		}
-
-		m_bObjectBuildability.Set( i, false );
+		m_bObjectBuildability.Set( i, ( m_bObjectValidity[ i ] && pOwner->CanBuild( i ) == CB_CAN_BUILD ) );
 	}
 
 	m_iCurrentObject = iObject;
-	m_iCurrentObjectState = pOwner->CanBuild( m_iCurrentObject );
+	m_iCurrentObjectState = m_bObjectBuildability[ iObject ];
 	m_flStartTime = 0;
 	m_flTotalTime = 0;
 #endif

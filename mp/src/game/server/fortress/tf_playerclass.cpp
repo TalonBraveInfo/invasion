@@ -96,9 +96,6 @@ public:
 	double				m_flPlayerTime;	// How much player time was spent in this class.
 };
 
-		
-ConVar	tf2_object_hard_limits( "tf2_object_hard_limits","0", FCVAR_NONE, "If true, use hard object limits instead of resource costs" ); 
-
 CPlayerClassStats g_PlayerClassStats[STATS_NUM_GROUPS];
 
 void AddPlayerClassTime( int classnum, float seconds )
@@ -747,27 +744,18 @@ int CPlayerClass::CanBuild( int iObjectType )
 {
 	int iObjectCount = GetNumObjects( iObjectType );
 
-	// Make sure we haven't hit maximum number
-	if ( tf2_object_hard_limits.GetBool() )
-	{
-		if ( iObjectCount >= GetObjectInfo( iObjectType )->m_nMaxObjects )
-			return CB_LIMIT_REACHED;
-	}
-	else
-	{
-		// Introducing this restriction here for cases where objects are cheap enough that players could possibly build too 
-		// many, i.e. the barbed wire
-		int maxObjects = GetObjectInfo( iObjectType )->m_nMaxObjects;
-		if( ( maxObjects > 0 ) && iObjectCount >= maxObjects )
-			return CB_LIMIT_REACHED;
+	// Introducing this restriction here for cases where objects are cheap enough that players could possibly build too 
+	// many, i.e. the barbed wire
+	int maxObjects = GetObjectInfo( iObjectType )->m_nMaxObjects;
+	if( ( maxObjects > 0 ) && iObjectCount >= maxObjects )
+		return CB_LIMIT_REACHED;
 
-		// Find out how much the next object should cost
-		int iCost = CalculateObjectCost( iObjectType, GetNumObjects( iObjectType ), m_pPlayer->GetTeamNumber() );
+	// Find out how much the next object should cost
+	int iCost = CalculateObjectCost( iObjectType, GetNumObjects( iObjectType ), m_pPlayer->GetTeamNumber() );
 
-		// Make sure we have enough resources
-		if ( m_pPlayer->GetBankResources() < iCost )
-			return CB_NEED_RESOURCES;
-	}
+	// Make sure we have enough resources
+	if ( m_pPlayer->GetBankResources() < iCost )
+		return CB_NEED_RESOURCES;
 
 	return CB_CAN_BUILD;
 }
@@ -797,23 +785,18 @@ int	CPlayerClass::GetNumObjects( int iObjectType )
 int	CPlayerClass::StartedBuildingObject( int iObjectType )
 {
 	// Deduct the cost of the object
-	if ( !tf2_object_hard_limits.GetBool() )
-	{
-		int iCost = CalculateObjectCost( iObjectType, GetNumObjects( iObjectType ), m_pPlayer->GetTeamNumber() );
-		if ( iCost > m_pPlayer->GetBankResources() )
-			// Player must have lost resources since he started placing
-			return 0;
+	int iCost = CalculateObjectCost( iObjectType, GetNumObjects( iObjectType ), m_pPlayer->GetTeamNumber() );
+	if ( iCost > m_pPlayer->GetBankResources() )
+		// Player must have lost resources since he started placing
+		return 0;
 
-		m_pPlayer->RemoveBankResources( iCost );
+	m_pPlayer->RemoveBankResources( iCost );
 
-		// If the object costs 0, we need to return non-0 to mean success
-		if ( !iCost )
-			return 1;
+	// If the object costs 0, we need to return non-0 to mean success
+	if ( !iCost )
+		return 1;
 
-		return iCost;
-	}
-
-	return 1;
+	return iCost;
 }
 
 //-----------------------------------------------------------------------------
@@ -822,11 +805,8 @@ int	CPlayerClass::StartedBuildingObject( int iObjectType )
 void CPlayerClass::StoppedBuilding( int iObjectType )
 {
 	// Return the cost of the object
-	if ( !tf2_object_hard_limits.GetBool() )
-	{
-		int iCost = CalculateObjectCost( iObjectType, GetNumObjects( iObjectType ), m_pPlayer->GetTeamNumber() );
-		m_pPlayer->AddBankResources( iCost );
-	}
+	int iCost = CalculateObjectCost( iObjectType, GetNumObjects( iObjectType ), m_pPlayer->GetTeamNumber() );
+	m_pPlayer->AddBankResources( iCost );
 }
 
 //-----------------------------------------------------------------------------
@@ -842,11 +822,8 @@ void CPlayerClass::FinishedObject( CBaseObject *pObject )
 void CPlayerClass::PickupObject( CBaseObject *pObject )
 {
 	// Return the cost of the object
-	if ( !tf2_object_hard_limits.GetBool() )
-	{
-		int iCost = CalculateObjectCost( pObject->GetType(), GetNumObjects( pObject->GetType() ), m_pPlayer->GetTeamNumber(), true );
-		m_pPlayer->AddBankResources( iCost );
-	}
+	int iCost = CalculateObjectCost( pObject->GetType(), GetNumObjects( pObject->GetType() ), m_pPlayer->GetTeamNumber(), true );
+	m_pPlayer->AddBankResources( iCost );
 }
 
 

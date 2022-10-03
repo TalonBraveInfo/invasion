@@ -35,6 +35,7 @@ public:
 	virtual int		GetSlot( void ) const;
 	virtual int		GetPosition( void ) const;
 	virtual const char *GetPrintName( void ) const;
+	bool                CanBeSelected() override;
 
 #ifdef CLIENT_DLL
 	virtual CHudTexture const *GetSpriteActive( void ) const;
