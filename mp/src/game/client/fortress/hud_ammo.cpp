@@ -42,7 +42,7 @@ void CHudAmmo::SetSecondaryAmmo( int nAmmoType, int nTotalAmmo, int nClipCount, 
 
 bool CHudAmmo::ShouldShowPrimaryClip() const
 {
-	if ( m_nAmmoType1 <= 0 )
+	if ( m_nAmmoType1 <= 0 || m_nTotalAmmo1 >= 999 )
 		return false;
 
 	if ( m_nClip1 < 0 )
