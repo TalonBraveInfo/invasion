@@ -296,9 +296,7 @@ void CBasePlasmaProjectile::MissileTouch( CBaseEntity *pOther )
 	Vector vecSpot = GetLocalOrigin() - velDir * 32;
 
 	// First, just clip to the box
-	Ray_t ray;
-	ray.Init( vecSpot, vecSpot + velDir * 64 );
-	enginetrace->ClipRayToEntity( ray, MASK_SHOT, pOther, &tr );
+	UTIL_TraceLine( vecSpot, vecSpot + ( velDir * 64 ), MASK_SHOT, this, COLLISION_GROUP_NONE, &tr );
 
 	// Create the appropriate impact
 	bool bHurtTarget = ( !InSameTeam( pOther ) && pOther->m_takedamage != DAMAGE_NO );
