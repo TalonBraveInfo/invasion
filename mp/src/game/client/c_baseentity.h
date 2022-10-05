@@ -1499,7 +1499,7 @@ private:
 
 	// Computes the water level + type
 	void UpdateWaterState();
-	void WaterSplash( const Vector &intersection, float force );
+	void WaterSplash();
 
 	// Checks a sweep without actually performing the move
 	void PhysicsCheckSweep( const Vector& vecAbsStart, const Vector &vecAbsDelta, trace_t *pTrace );

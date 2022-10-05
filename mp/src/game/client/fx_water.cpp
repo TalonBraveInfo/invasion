@@ -73,7 +73,6 @@ void UTIL_GetNormalizedColorTintAndLuminosity( const Vector &color, Vector *tint
 
 }
 
-
 //-----------------------------------------------------------------------------
 // Purpose: 
 // Input  : &origin - 
@@ -407,6 +406,17 @@ void FX_GunshotSlimeSplash( const Vector &origin, const Vector &normal, float sc
 	ep.m_pOrigin = &origin;
 
 	C_BaseEntity::EmitSound( filter, SOUND_FROM_WORLD, ep );
+}
+
+void FX_WaterSplash( const Vector &origin, const Vector &normal, float scale, bool isSlime )
+{
+	if ( isSlime )
+	{
+		FX_GunshotSlimeSplash( origin, normal, scale );
+		return;
+	}
+
+	FX_GunshotSplash( origin, normal, scale );
 }
 
 //-----------------------------------------------------------------------------

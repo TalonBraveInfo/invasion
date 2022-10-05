@@ -1592,8 +1592,7 @@ void CBaseEntity::PhysicsCheckWaterTransition( void )
 		if (oldcont == CONTENTS_EMPTY)
 		{
 #ifdef CLIENT_DLL
-			//TODO: bit naiive to determine current origin is point of intersection...
-			WaterSplash( GetAbsOrigin(), GetAbsVelocity().Length() );
+			WaterSplash();
 #endif
 
 			// just crossed into water

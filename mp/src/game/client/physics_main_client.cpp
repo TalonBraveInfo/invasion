@@ -42,32 +42,28 @@ static void Physics_TraceHull( C_BaseEntity* pBaseEntity, const Vector &vecStart
 	}
 }
 
-void C_BaseEntity::WaterSplash( const Vector &intersection, float force )
+void C_BaseEntity::WaterSplash()
 {
 	if ( !ShouldDrawWaterImpacts() )
 		return;
+
+	//TODO: bit naiive to assume current origin is point of intersection...
+	Vector intersection = GetAbsOrigin();
 
 	// See if this is the point we entered
 	int contents = enginetrace->GetPointContents( intersection - Vector( 0, 0, 0.1f ) );
 	if ( ( contents & ( CONTENTS_WATER | CONTENTS_SLIME ) ) == 0 )
 		return;
 
-	force /= 1000.0f;
-	if ( force > 10.0f ) 
-		force = 10.0f;
-	else if ( force <= 0.0f )
-		force = 1.0f;
+	float scale = GetAbsVelocity().Length() / 1000.0f;
+	if ( scale > 10.0f ) 
+		scale = 10.0f;
+	else if ( scale <= 0.0f )
+		scale = 1.0f;
 
-	CEffectData data;
-	data.m_vNormal = Vector( 0, 0, 1 );
-	data.m_flScale = force + random->RandomFloat( 4, 8 );
-	data.m_vOrigin = intersection;
-	if ( contents & CONTENTS_SLIME )
-		data.m_fFlags |= FX_WATER_IN_SLIME;
+	scale += random->RandomFloat( 4, 8 );
 
-	//Msg( "FORCE %f SPLASH %f\n", force, data.m_flScale );
-
-	DispatchEffect( "watersplash", data );
+	FX_WaterSplash( intersection, Vector( 0, 0, 1 ), scale, ( contents & CONTENTS_SLIME ) );
 }
 
 //-----------------------------------------------------------------------------
