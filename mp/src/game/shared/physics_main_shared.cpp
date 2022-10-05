@@ -1591,9 +1591,10 @@ void CBaseEntity::PhysicsCheckWaterTransition( void )
 	{
 		if (oldcont == CONTENTS_EMPTY)
 		{
-#ifndef CLIENT_DLL
-			Splash();
-#endif // !CLIENT_DLL
+#ifdef CLIENT_DLL
+			//TODO: bit naiive to determine current origin is point of intersection...
+			WaterSplash( GetAbsOrigin(), GetAbsVelocity().Length() );
+#endif
 
 			// just crossed into water
 			EmitSound( "BaseEntity.EnterWater" );

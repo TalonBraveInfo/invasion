@@ -1174,7 +1174,6 @@ public:
 	void					SetWaterType( int nType );
 
 	virtual bool			PhysicsSplash( const Vector &centerPoint, const Vector &normal, float rawSpeed, float scaledSpeed ) { return false; }
-	virtual void			Splash() {}
 
 	void					ClearSolidFlags( void );	
 	void					RemoveSolidFlags( int flags );

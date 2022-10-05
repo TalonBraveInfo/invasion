@@ -2015,7 +2015,7 @@ void CGameMovement::FullWalkMove( )
 		  ( m_nOldWaterLevel != WL_NotInWater && player->GetWaterLevel() == WL_NotInWater ) )
 	{
 		PlaySwimSound();
-#if !defined( CLIENT_DLL )
+#if 0 // did nothing... perhaps replace with WaterSplash later?
 		player->Splash();
 #endif
 	}

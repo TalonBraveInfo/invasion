@@ -235,6 +235,8 @@ void CBasePlasmaProjectile::PerformCustomPhysics( Vector *pNewPosition, Vector *
 	// Simulate next position
 	m_Shared.ComputePosition( gpGlobals->curtime, pNewPosition, pNewVelocity, pNewAngles, pNewAngVelocity );
 #endif
+
+	PhysicsCheckWaterTransition();
 }
 
 //-----------------------------------------------------------------------------

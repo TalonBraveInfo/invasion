@@ -6,6 +6,7 @@
 //=============================================================================//
 #include "cbase.h"
 #include "c_baseentity.h"
+#include "c_te_effect_dispatch.h"
 #ifdef WIN32
 #include <typeinfo.h>
 #endif
@@ -41,6 +42,33 @@ static void Physics_TraceHull( C_BaseEntity* pBaseEntity, const Vector &vecStart
 	}
 }
 
+void C_BaseEntity::WaterSplash( const Vector &intersection, float force )
+{
+	if ( !ShouldDrawWaterImpacts() )
+		return;
+
+	// See if this is the point we entered
+	int contents = enginetrace->GetPointContents( intersection - Vector( 0, 0, 0.1f ) );
+	if ( ( contents & ( CONTENTS_WATER | CONTENTS_SLIME ) ) == 0 )
+		return;
+
+	force /= 1000.0f;
+	if ( force > 10.0f ) 
+		force = 10.0f;
+	else if ( force <= 0.0f )
+		force = 1.0f;
+
+	CEffectData data;
+	data.m_vNormal = Vector( 0, 0, 1 );
+	data.m_flScale = force + random->RandomFloat( 4, 8 );
+	data.m_vOrigin = intersection;
+	if ( contents & CONTENTS_SLIME )
+		data.m_fFlags |= FX_WATER_IN_SLIME;
+
+	//Msg( "FORCE %f SPLASH %f\n", force, data.m_flScale );
+
+	DispatchEffect( "watersplash", data );
+}
 
 //-----------------------------------------------------------------------------
 // Purpose: Does not change the entities velocity at all
