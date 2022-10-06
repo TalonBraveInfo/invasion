@@ -1,4 +1,4 @@
 /*
 Copyright (C) Valve Corporation
-Copyright (C) 2014-2022 TalonBrave.info (see README.md for list of contributors)
+"Invasion" project by TalonBrave.info, Copyright (C) 2014-2022 (see README.md for list of contributors)
 */
