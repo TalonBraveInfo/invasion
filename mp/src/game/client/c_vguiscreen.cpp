@@ -42,6 +42,7 @@ CLIENTEFFECT_REGISTER_BEGIN( PrecacheEffectVGuiScreen )
 CLIENTEFFECT_MATERIAL( "engine/writez" )
 CLIENTEFFECT_REGISTER_END()
 
+ConVar vgui_cursor_size( "vgui_cursor_size", "4", FCVAR_ARCHIVE );
 
 // ----------------------------------------------------------------------------- //
 // This is a cache of preloaded keyvalues.
@@ -597,9 +598,6 @@ void C_VGuiScreen::DrawScreenCursor() {
 
 	unsigned char pColor[ 4 ] = { 255, 255, 255, 255 };
 
-	static const float mouseWidth = 8;
-	static const float mouseHeight = 8;
-
 	// Fetch the x and y cursor positions, ensuring they're within the valid area
 
 	float xPos = m_nOldPx * m_flWidth / m_nPixelWidth;
@@ -620,22 +618,24 @@ void C_VGuiScreen::DrawScreenCursor() {
 	IMesh *pMesh = pRenderContext->GetDynamicMesh( true, NULL, NULL, mouseCursor );
 	meshBuilder.Begin( pMesh, MATERIAL_QUADS, 1 );
 
+	float mouseSize = vgui_cursor_size.GetFloat();
+
 	meshBuilder.Position3f( xPos, yPos, 0 );
 	meshBuilder.TexCoord2f( 0, 0.0f, 0.0f );
 	meshBuilder.Color4ubv( pColor );
 	meshBuilder.AdvanceVertex();
 
-	meshBuilder.Position3f( xPos + mouseWidth, yPos, 0 );
+	meshBuilder.Position3f( xPos + mouseSize, yPos, 0 );
 	meshBuilder.TexCoord2f( 0, 1.0f, 0.0f );
 	meshBuilder.Color4ubv( pColor );
 	meshBuilder.AdvanceVertex();
 
-	meshBuilder.Position3f( xPos + mouseWidth, yPos + -mouseHeight, 0 );
+	meshBuilder.Position3f( xPos + mouseSize, yPos + -mouseSize, 0 );
 	meshBuilder.TexCoord2f( 0, 1.0f, 1.0f );
 	meshBuilder.Color4ubv( pColor );
 	meshBuilder.AdvanceVertex();
 
-	meshBuilder.Position3f( xPos, yPos + -mouseHeight, 0 );
+	meshBuilder.Position3f( xPos, yPos + -mouseSize, 0 );
 	meshBuilder.TexCoord2f( 0, 0.0f, 1.0f );
 	meshBuilder.Color4ubv( pColor );
 	meshBuilder.AdvanceVertex();
