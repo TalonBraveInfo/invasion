@@ -1,6 +1,6 @@
 /*
 Copyright (C) Valve Corporation
-Copyright (C) 2014-2016 TalonBrave.info
+"Invasion" project by TalonBrave.info, Copyright (C) 2014-2022 (see README.md for list of contributors)
 */
 
 #include "cbase.h"
@@ -124,6 +124,9 @@ void CHudTimer::StopTimer( void )
 //-----------------------------------------------------------------------------
 Color CHudTimer::GetColor( void )
 {
+	if ( m_flTimeLimit == 0 )
+		return m_TextColor;
+
 	Color clr = Color( 0, 0, 0, 0 );
 
 	float flPercentagePassed = 1 - (m_flCurrentTime / m_flTimeLimit);
@@ -158,6 +161,9 @@ Color CHudTimer::GetColor( void )
 //-----------------------------------------------------------------------------
 Color CHudTimer::GetBoxColor()
 {
+	if ( m_flTimeLimit == 0 )
+		return m_BoxColor;
+
 	Color boxColor = Color( 0, 0, 0, 0 );
 
 	float flPercentagePassed = 1 - (m_flCurrentTime / m_flTimeLimit);

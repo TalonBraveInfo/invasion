@@ -1,0 +1,4 @@
+/*
+Copyright (C) Valve Corporation
+Copyright (C) 2014-2022 TalonBrave.info (see README.md for list of contributors)
+*/
