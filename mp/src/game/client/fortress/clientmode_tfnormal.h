@@ -67,8 +67,6 @@ public:
 		vgui::HCursor m_CursorCommander;
 		vgui::HCursor m_CursorRightMouseMove;
 		// hogsy end
-
-		vgui::Label *versionLabel;
 	};
 
 	virtual void Update() override;

@@ -450,6 +450,7 @@ $Project "Client"
 					$File	fortress/hud_technologytreedoc.h
 					$File	fortress/hud_timer.cpp
 					$File	fortress/hud_timer.h
+					$File	fortress/hud_version.cpp
 					$File	fortress/hud_vehicle_role.cpp
 					$File	fortress/hud_vehicle_role.h
 					$File	fortress/hud_weaponselection.cpp

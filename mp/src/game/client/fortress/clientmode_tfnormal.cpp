@@ -81,18 +81,11 @@ ClientModeTFNormal::Viewport::Viewport() :
 #endif
 
 	SetScheme( vgui::scheme()->LoadSchemeFromFileEx( enginevgui->GetPanel( PANEL_CLIENTDLL ), "resource/teamscheme.res", "TeamScheme" ) );
-	
-	versionLabel = new vgui::Label( this, "VersionLabel", "PRE-ALPHA (v0.0.1.3)" );
-	versionLabel->SetContentAlignment( vgui::Label::Alignment::a_center );
-	versionLabel->SetWide( GetWide() );
-	versionLabel->SetPaintBackgroundEnabled( false );
 }
 
 ClientModeTFNormal::Viewport::~Viewport() {}
 
 void ClientModeTFNormal::Viewport::Paint() {
-	versionLabel->SetWide( GetWide() );
-
 	BaseClass::Paint();
 }
 
