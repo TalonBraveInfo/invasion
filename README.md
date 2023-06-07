@@ -28,9 +28,3 @@ While we aim for authenticity, we do have to take some creative liberties given 
 - Valve (Original concept and code)
 - [SCell555 for their updated _ShaderCompile.exe_](https://github.com/SCell555/ShaderCompile)
 - [thexa4 for their PBR implementation](https://github.com/thexa4/source-pbr)
-
-## Contributing
-
-If you're interested in contributing to the project then we recommend jumping onto our [Discord](https://discord.gg/EdmwgVk), so we can better coordinate everything.
-
-We're currently looking for programmers, level designers, modellers, animators and artists, so if you're any one of those then your help would be greatly appreciated!
